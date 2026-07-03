@@ -4,7 +4,7 @@ class AppConstants {
 
   // ── Super Admin UIDs ──────────────────────────────────────────────────────
   static const List<String> superAdminUids = [
-    "DfbaXxItLIMFkY48XF2jBF1qjLC3",
+    "Z4KfPSRXJ7ZX3yZU9esowKqeRVJ3",
   
     // mohammedauwalnassra@gmail.com
     "zeFovG6ctXWTNTCwiH68RXTv8NJ2",
