@@ -222,7 +222,7 @@ class AdminEscalationDashboardScreen extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             Text(
-              'No escalated orders at this time.\nAll IsmailTex orders are being handled.',
+              'No escalated orders at this time.\nAll PhlakesFabric orders are being handled.',
               textAlign: TextAlign.center,
               style: GoogleFonts.poppins(
                 color: colors.textSecondary,

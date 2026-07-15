@@ -34,7 +34,7 @@ class _ManageAdminLocationsScreenState
       context: context,
       isScrollControlled: true,
       child: PremiumLocationPickerBottomSheet(
-        title: 'Set IsmailTex Warehouse / Pickup Location',
+        title: 'Set PhlakesFabric Warehouse / Pickup Location',
         hintText:
             'Search fabric warehouse or shop location in Nigeria',
         initialValue: currentAddress,
@@ -249,7 +249,7 @@ class _ManageAdminLocationsScreenState
                                 CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'IsmailTex Warehouse / Pickup',
+                                'PhlakesFabric Warehouse / Pickup',
                                 style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.w700,
                                   color: colors.textPrimary,

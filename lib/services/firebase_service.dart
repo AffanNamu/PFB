@@ -1505,7 +1505,7 @@ class FirebaseService {
       if (userId.isNotEmpty) {
         await _notifyUser(
           userUid: userId,
-          title: 'Order Update — IsmailTex',
+          title: 'Order Update — PhlakesFabric',
           body: _orderStatusMessage(status),
           type: 'order_status_update',
           targetScreen: 'order_detail',
@@ -1602,7 +1602,7 @@ class FirebaseService {
     try {
       await _notifyUser(
         userUid: user.uid,
-        title: '🎉 Order Placed — IsmailTex',
+        title: '🎉 Order Placed — PhlakesFabric',
         body: 'Your fabric order has been placed successfully. We\'ll keep you updated!',
         type: 'order_created',
         targetScreen: 'order_detail',
@@ -1671,7 +1671,7 @@ class FirebaseService {
     try {
       await _notifyAdmin(
         adminUid: adminUid,
-        title: '📦 Order Reassigned — IsmailTex',
+        title: '📦 Order Reassigned — PhlakesFabric',
         body: 'A textile order has been reassigned to you.',
         type: 'admin_request_reassigned',
         targetScreen: 'admin_orders',
