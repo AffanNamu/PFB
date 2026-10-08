@@ -29,6 +29,8 @@ class _StoreCategories {
     {'label': 'Bags',            'emoji': '👜'},
     {'label': 'Jilbabs',         'emoji': '🥻'},
     {'label': 'Khimars',         'emoji': '🌙'},
+    {'label': 'Lace',               'emoji': '🤍'},
+    {'label': 'Atampa',             'emoji': '🧵'},
     {'label': 'Kaftans',         'emoji': '👗'},
     {'label': 'Dresses',         'emoji': '💃'},
     {'label': 'Two-Piece Sets',  'emoji': '✨'},

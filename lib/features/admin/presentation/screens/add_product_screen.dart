@@ -23,7 +23,7 @@ import 'package:pfb/core/theme/app_theme.dart';
 
 class _ProductData {
   static const fabricTypes = [
-    'Abaya', 'Hijab', 'Bag', 'Jilbab', 'Khimar',
+    'Abaya', 'Hijab', 'Bag', 'Lace', 'Atampa', 'Jilbab', 'Khimar',
     'Kaftan', 'Dress', 'Two-Piece Set', 'Prayer Wear', 'Scarf',
     'Shoes', 'Jewelry', 'Perfume', 'Accessory', 'Kids Wear',
   ];
