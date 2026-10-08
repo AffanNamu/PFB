@@ -1004,25 +1004,27 @@ class FirebaseService {
     });
   }
 
-  // ── TEXTILE CATEGORIES ───────────────────────────────────────────────────────
+  // ── STORE CATEGORIES ───────────────────────────────────────────────────────
 
-  static const List<String> _defaultTextileCategories = [
+  static const List<String> _defaultCategories = [
     'General',
     'Trending',
     'Featured',
-    'Ankara',
-    'Lace',
-    'Aso Oke',
-    'Chiffon',
-    'Cotton',
-    'Silk',
-    'Linen',
-    'Adire',
-    'George',
-    'Velvet',
-    'Kente',
-    'Native Wear',
-    'Wedding Collection',
+    'Abayas',
+    'Hijabs',
+    'Bags',
+    'Jilbabs',
+    'Khimars',
+    'Kaftans',
+    'Dresses',
+    'Two-Piece Sets',
+    'Prayer Wear',
+    'Scarves',
+    'Shoes',
+    'Jewelry',
+    'Perfumes',
+    'Accessories',
+    'Kids',
     'New Arrivals',
     'Best Sellers',
   ];
@@ -1035,7 +1037,7 @@ class FirebaseService {
           .toList();
 
       final merged = <String>{
-        ..._defaultTextileCategories,
+        ..._defaultCategories,
         ...dbCategories,
       }.toList()
         ..sort();
@@ -1060,28 +1062,30 @@ class FirebaseService {
   }
 
   Future<void> seedDefaultCategoriesIfMissing() async {
-    final textileDefaults = [
+    final defaultCategories = [
       'General',
       'Trending',
       'Featured',
-      'Ankara',
-      'Lace',
-      'Aso Oke',
-      'Chiffon',
-      'Cotton',
-      'Silk',
-      'Linen',
-      'Adire',
-      'George',
-      'Velvet',
-      'Kente',
-      'Native Wear',
-      'Wedding Collection',
+      'Abayas',
+      'Hijabs',
+      'Bags',
+      'Jilbabs',
+      'Khimars',
+      'Kaftans',
+      'Dresses',
+      'Two-Piece Sets',
+      'Prayer Wear',
+      'Scarves',
+      'Shoes',
+      'Jewelry',
+      'Perfumes',
+      'Accessories',
+      'Kids',
       'New Arrivals',
       'Best Sellers',
     ];
 
-    for (final category in textileDefaults) {
+    for (final category in defaultCategories) {
       final ref = firestore.collection('categories').doc(category.toLowerCase().replaceAll(' ', '_'));
       final snap = await ref.get();
       if (!snap.exists) {

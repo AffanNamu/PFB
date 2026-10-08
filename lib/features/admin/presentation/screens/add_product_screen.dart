@@ -18,29 +18,28 @@ import 'package:pfb/core/theme/build_context_theme_x.dart';
 import 'package:pfb/core/theme/app_theme.dart';
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Textile-specific constants
+// Product-specific constants
 // ─────────────────────────────────────────────────────────────────────────────
 
-class _TextileData {
+class _ProductData {
   static const fabricTypes = [
-    'Ankara', 'Lace', 'Aso Oke', 'Chiffon', 'Cotton',
-    'Silk', 'Linen', 'Adire', 'George', 'Velvet',
-    'Atiku', 'Organza', 'Satin', 'Wool', 'Denim',
-    'Net', 'Sequence', 'Swiss Voile', 'Broderie',
+    'Abaya', 'Hijab', 'Bag', 'Jilbab', 'Khimar',
+    'Kaftan', 'Dress', 'Two-Piece Set', 'Prayer Wear', 'Scarf',
+    'Shoes', 'Jewelry', 'Perfume', 'Accessory', 'Kids Wear',
   ];
 
   static const occasions = [
-    'Wedding', 'Sallah', 'Christmas', 'Birthday',
-    'Naming Ceremony', 'Burial', 'Corporate', 'Casual',
-    'Party', 'Traditional', 'Graduation',
+    'Eid', 'Wedding', 'Sallah', 'Jumu\'ah', 'Birthday',
+    'Naming Ceremony', 'Corporate', 'Casual', 'Party',
+    'Traditional', 'Graduation', 'Everyday',
   ];
 
-  static const genders = ['Men', 'Women', 'Children', 'Unisex'];
+  static const genders = ['Women', 'Girls', 'Men', 'Children', 'Unisex'];
 
   static const standardSizes = [
-    'XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL',
-    '1 yard', '2 yards', '3 yards', '4 yards',
-    '5 yards', '6 yards', '8 yards', '10 yards',
+    'Free Size', 'XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL',
+    '50', '52', '54', '56', '58', '60',
+    'Small', 'Medium', 'Large',
   ];
 
   static const commonColors = [
@@ -514,7 +513,7 @@ class _AddProductScreenState extends State<AddProductScreen>
             Wrap(
               spacing: 8,
               runSpacing: 8,
-              children: _TextileData.fabricTypes.map((f) {
+              children: _ProductData.fabricTypes.map((f) {
                 final selected = _selectedFabricType == f;
                 return GestureDetector(
                   onTap: () =>
@@ -589,7 +588,7 @@ class _AddProductScreenState extends State<AddProductScreen>
             _DropdownField(
               label: 'Occasion',
               value: _selectedOccasion.isEmpty ? null : _selectedOccasion,
-              items: _TextileData.occasions,
+              items: _ProductData.occasions,
               hint: 'Select occasion',
               colors: colors,
               onChanged: (v) =>
@@ -599,7 +598,7 @@ class _AddProductScreenState extends State<AddProductScreen>
             _DropdownField(
               label: 'Gender',
               value: _selectedGender,
-              items: _TextileData.genders,
+              items: _ProductData.genders,
               hint: 'Select gender',
               colors: colors,
               onChanged: (v) =>
@@ -609,7 +608,7 @@ class _AddProductScreenState extends State<AddProductScreen>
             _DropdownField(
               label: 'Origin / Country',
               value: _selectedOrigin,
-              items: _TextileData.origins,
+              items: _ProductData.origins,
               hint: 'Select origin',
               colors: colors,
               onChanged: (v) =>
@@ -643,7 +642,7 @@ class _AddProductScreenState extends State<AddProductScreen>
             Wrap(
               spacing: 8,
               runSpacing: 8,
-              children: _TextileData.commonColors.map((color) {
+              children: _ProductData.commonColors.map((color) {
                 final selected = _selectedColors.contains(color);
                 return GestureDetector(
                   onTap: () {
@@ -732,7 +731,7 @@ class _AddProductScreenState extends State<AddProductScreen>
             Wrap(
               spacing: 8,
               runSpacing: 8,
-              children: _TextileData.standardSizes.map((size) {
+              children: _ProductData.standardSizes.map((size) {
                 final selected = _selectedSizes.contains(size);
                 return GestureDetector(
                   onTap: () {

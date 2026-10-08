@@ -19,33 +19,30 @@ import 'package:pfb/services/firebase_service.dart';
 import 'package:pfb/shared/widgets/app_status_chip.dart';
 import 'package:pfb/shared/widgets/app_surface_card.dart';
 
-// ── Textile Categories ─────────────────────────────────────────────────────────
+// ── Store Categories ─────────────────────────────────────────────────────────
 
-class _TextileCategories {
+class _StoreCategories {
   static const List<Map<String, dynamic>> items = [
-    {'label': 'All',          'emoji': '🏪'},
-    {'label': 'Ankara',       'emoji': '🌺'},
-    {'label': 'Lace',         'emoji': '🤍'},
-    {'label': 'Aso Oke',      'emoji': '👑'},
-    {'label': 'Chiffon',      'emoji': '🌸'},
-    {'label': 'Cotton',       'emoji': '☁️'},
-    {'label': 'Silk',         'emoji': '✨'},
-    {'label': 'Linen',        'emoji': '🌿'},
-    {'label': 'Native Wear',  'emoji': '🇳🇬'},
-    {'label': 'Adire',        'emoji': '🎨'},
-    {'label': 'George',       'emoji': '💎'},
-    {'label': 'Velvet',       'emoji': '🍷'},
-    {'label': 'Atiku',        'emoji': '🏅'},
-    {'label': 'Wedding',      'emoji': '💍'},
-    {'label': 'New Arrivals', 'emoji': '🆕'},
-    {'label': 'Best Sellers', 'emoji': '⭐'},
-    {'label': 'Trending',     'emoji': '🔥'},
-    {'label': 'Featured',     'emoji': '💫'},
-    {'label': 'Men',          'emoji': '👔'},
-    {'label': 'Women',        'emoji': '👗'},
-    {'label': 'Children',     'emoji': '👧'},
-    {'label': 'Accessories',  'emoji': '👜'},
-    {'label': 'Luxury',       'emoji': '🥂'},
+    {'label': 'All',             'emoji': '🏪'},
+    {'label': 'Abayas',          'emoji': '🧕'},
+    {'label': 'Hijabs',          'emoji': '🧣'},
+    {'label': 'Bags',            'emoji': '👜'},
+    {'label': 'Jilbabs',         'emoji': '🥻'},
+    {'label': 'Khimars',         'emoji': '🌙'},
+    {'label': 'Kaftans',         'emoji': '👗'},
+    {'label': 'Dresses',         'emoji': '💃'},
+    {'label': 'Two-Piece Sets',  'emoji': '✨'},
+    {'label': 'Prayer Wear',     'emoji': '🕌'},
+    {'label': 'Scarves',         'emoji': '🎀'},
+    {'label': 'Shoes',           'emoji': '👠'},
+    {'label': 'Jewelry',         'emoji': '💍'},
+    {'label': 'Perfumes',        'emoji': '🌸'},
+    {'label': 'Accessories',     'emoji': '🛍️'},
+    {'label': 'Kids',            'emoji': '👧'},
+    {'label': 'New Arrivals',    'emoji': '🆕'},
+    {'label': 'Best Sellers',    'emoji': '⭐'},
+    {'label': 'Trending',        'emoji': '🔥'},
+    {'label': 'Featured',        'emoji': '💫'},
   ];
 }
 
@@ -323,7 +320,7 @@ class _ProductListScreenState extends State<ProductListScreen>
               final dynamicCategories =
                   categorySnapshot.data ?? const <String>[];
 
-              final staticLabels = _TextileCategories.items
+              final staticLabels = _StoreCategories.items
                   .map((e) => e['label'] as String)
                   .toSet();
               final extraFromDB = dynamicCategories
@@ -331,7 +328,7 @@ class _ProductListScreenState extends State<ProductListScreen>
                   .toList();
 
               final allCategories = [
-                ..._TextileCategories.items
+                ..._StoreCategories.items
                     .map((e) => e['label'] as String),
                 ...extraFromDB,
               ];
@@ -617,8 +614,8 @@ class _ProductListScreenState extends State<ProductListScreen>
                                   childCount: filtered.length,
                                 ),
                                 gridDelegate:
-                                    const SliverGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisCount:  2,
+                                    const SliverGridDelegateWithMaxCrossAxisExtent(
+                                  maxCrossAxisExtent: 240,
                                   childAspectRatio: 0.68,
                                   crossAxisSpacing: 12,
                                   mainAxisSpacing:  12,
@@ -685,8 +682,8 @@ class _ProductListScreenState extends State<ProductListScreen>
     return GridView.builder(
       padding: const EdgeInsets.all(16),
       itemCount: 6,
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount:   2,
+      gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+        maxCrossAxisExtent: 240,
         childAspectRatio: 0.68,
         crossAxisSpacing: 12,
         mainAxisSpacing:  12,
@@ -1109,7 +1106,7 @@ class _ProductListScreenState extends State<ProductListScreen>
           onTap:       () => setState(() => _showSearchFocused = true),
           onSubmitted: (_) => setState(() => _showSearchFocused = false),
           decoration: InputDecoration(
-            hintText: 'Search Ankara, Lace, Aso Oke, Silk...',
+            hintText: 'Search abayas, hijabs, bags...',
             hintStyle: GoogleFonts.poppins(
               fontSize: 13,
               color:    colors.textSecondary,
@@ -1669,7 +1666,7 @@ class _ProductListScreenState extends State<ProductListScreen>
           final label    = categories[i];
           final selected = label == effectiveCategory;
 
-          final matchItem = _TextileCategories.items.firstWhere(
+          final matchItem = _StoreCategories.items.firstWhere(
             (e) => e['label'] == label,
             orElse: () => {'emoji': '🧵'},
           );

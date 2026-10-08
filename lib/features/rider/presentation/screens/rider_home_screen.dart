@@ -520,10 +520,10 @@ class _EmptyOrdersState extends StatelessWidget {
               runSpacing: 8,
               alignment: WrapAlignment.center,
               children: [
-                '🎨 Ankara',
-                '✨ Lace',
-                '👘 Aso Oke',
-                '💎 Chiffon',
+                '🧕 Abayas',
+                '🧣 Hijabs',
+                '👜 Bags',
+                '💍 Accessories',
               ].map((label) {
                 return Container(
                   padding: const EdgeInsets.symmetric(

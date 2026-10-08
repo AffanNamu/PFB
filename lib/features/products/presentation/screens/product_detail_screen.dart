@@ -1056,7 +1056,7 @@ class _ProductDetailScreenState
     if (_product.yardage > 0)
       details.add({
         'icon':  Icons.linear_scale_rounded,
-        'label': 'Yardage',
+        'label': 'Length',
         'value': '${_product.yardage} yards',
       });
     if (_product.origin.isNotEmpty)

@@ -635,7 +635,7 @@ class _CartScreenState extends State<CartScreen>
             const SizedBox(height: 10),
             Text(
               // ── Brand name updated ───────────────────────────
-              'Discover premium Ankara, Lace, Aso Oke\nand more from Sakash Collection.',
+              'Discover abayas, hijabs, bags\nand more from Sakash Collection.',
               textAlign: TextAlign.center,
               style: GoogleFonts.poppins(
                 fontSize: 13,

@@ -912,6 +912,146 @@ class _AdminDashboardScreenState
 
   // ── Build ─────────────────────────────────────────────────────────
 
+  // ── Responsive helpers ───────────────────────────────────────
+
+  static const double _maxContentWidth = 1100;
+
+  /// Side gutter that keeps content centred and readable on tablets.
+  double _pageGutter(BuildContext context) {
+    final w = MediaQuery.of(context).size.width;
+    return w > _maxContentWidth + 32 ? (w - _maxContentWidth) / 2 : 16;
+  }
+
+  /// Quick-action tiles laid out in a responsive grid
+  /// (2 columns on phones, 3 on large phones/small tablets, 4 on iPad).
+  Widget _buildQuickActions(BuildContext context) {
+    void open(Widget screen) => Navigator.of(context).push(
+          MaterialPageRoute(builder: (_) => screen),
+        );
+
+    final items = <_ActionItem>[
+      _ActionItem(
+        icon: Icons.point_of_sale_rounded,
+        title: 'POS Terminal',
+        subtitle: 'Walk-in sales',
+        highlighted: true,
+        onTap: () => open(const PosDashboardScreen()),
+      ),
+      _ActionItem(
+        icon: Icons.add_box_outlined,
+        title: 'Add Product',
+        subtitle: 'Upload new product',
+        onTap: () => open(const AddProductScreen()),
+      ),
+      _ActionItem(
+        icon: Icons.inventory_2_outlined,
+        title: 'Manage Products',
+        subtitle: 'Edit & delete',
+        onTap: () => open(ManageProductsScreen()),
+      ),
+      _ActionItem(
+        icon: Icons.receipt_long_rounded,
+        title: _isSuperAdmin ? 'All Orders' : 'My Orders',
+        subtitle: 'Order management',
+        onTap: () => open(AdminOrdersScreen()),
+      ),
+      _ActionItem(
+        icon: Icons.local_shipping_outlined,
+        title: _isSuperAdmin ? 'All Deliveries' : 'My Deliveries',
+        subtitle: 'Delivery tracking',
+        onTap: () => open(AdminRidesScreen()),
+      ),
+      _ActionItem(
+        icon: Icons.category_outlined,
+        title: 'Categories',
+        subtitle: 'Product categories',
+        onTap: () => open(const ManageCategoriesScreen()),
+      ),
+      if (_isSuperAdmin) ...[
+        _ActionItem(
+          icon: Icons.location_city_rounded,
+          title: 'Locations',
+          subtitle: 'Admin coverage',
+          onTap: () => open(const ManageAdminLocationsScreen()),
+        ),
+        _ActionItem(
+          icon: Icons.payments_rounded,
+          title: 'Payment',
+          subtitle: 'Payment settings',
+          onTap: () => open(const PaymentSettingsScreen()),
+        ),
+      ],
+      _ActionItem(
+        icon: Icons.visibility_outlined,
+        title: 'User Preview',
+        subtitle: 'View as customer',
+        onTap: _switchToUserView,
+      ),
+      if (_isSuperAdmin) ...[
+        _ActionItem(
+          icon: Icons.warning_amber_rounded,
+          title: 'Escalations',
+          subtitle: 'Unassigned orders',
+          onTap: () => open(AdminEscalationDashboardScreen()),
+        ),
+        _ActionItem(
+          icon: Icons.analytics_rounded,
+          title: 'Analytics',
+          subtitle: 'Sales & performance',
+          onTap: () => open(const SuperAdminAnalyticsScreen()),
+        ),
+      ],
+      _ActionItem(
+        icon: Icons.notifications_active_outlined,
+        title: 'Notifications',
+        subtitle: 'Alerts & updates',
+        onTap: () => open(const NotificationsScreen()),
+      ),
+    ];
+
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final w = constraints.maxWidth;
+        final cols = w >= 900 ? 4 : (w >= 600 ? 3 : 2);
+        final large = w >= 600;
+        const gap = 12.0;
+
+        final rows = <Widget>[];
+        for (var i = 0; i < items.length; i += cols) {
+          final slice = items.skip(i).take(cols).toList();
+          rows.add(
+            Padding(
+              padding: EdgeInsets.only(bottom: i + cols < items.length ? gap : 0),
+              child: IntrinsicHeight(
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    for (var c = 0; c < cols; c++) ...[
+                      if (c > 0) const SizedBox(width: gap),
+                      Expanded(
+                        child: c < slice.length
+                            ? _ActionCard(
+                                icon: slice[c].icon,
+                                title: slice[c].title,
+                                subtitle: slice[c].subtitle,
+                                isHighlighted: slice[c].highlighted,
+                                large: large,
+                                onTap: slice[c].onTap,
+                              )
+                            : const SizedBox(),
+                      ),
+                    ],
+                  ],
+                ),
+              ),
+            ),
+          );
+        }
+        return Column(children: rows);
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final themeController = ThemeScope.of(context);
@@ -1164,7 +1304,10 @@ class _AdminDashboardScreenState
       body: CustomScrollView(
         slivers: [
           SliverPadding(
-            padding: const EdgeInsets.all(16),
+            padding: EdgeInsets.symmetric(
+              horizontal: _pageGutter(context),
+              vertical: 16,
+            ),
             sliver: SliverList(
               delegate: SliverChildListDelegate([
                 // ── Admin Mode Banner ──────────────────────
@@ -1554,206 +1697,7 @@ class _AdminDashboardScreenState
                 ),
 
                 // ── Quick Actions Grid ───────────────────
-                Row(
-                  children: [
-                    Expanded(
-                      child: _ActionCard(
-                        icon: Icons.point_of_sale_rounded,
-                        title: 'POS Terminal',
-                        subtitle: 'Walk-in sales',
-                        isHighlighted: true,
-                        onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (_) =>
-                                  const PosDashboardScreen(),
-                            ),
-                          );
-                        },
-                      ),
-                    ),
-                    const SizedBox(width: 12),
-                    Expanded(
-                      child: _ActionCard(
-                        icon: Icons.add_box_outlined,
-                        title: 'Add Product',
-                        subtitle: 'Upload new product',
-                        onTap: () =>
-                            Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (_) =>
-                                const AddProductScreen(),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 12),
-                Row(
-                  children: [
-                    Expanded(
-                      child: _ActionCard(
-                        icon: Icons.inventory_2_outlined,
-                        title: 'Manage Products',
-                        subtitle: 'Edit & delete',
-                        onTap: () =>
-                            Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (_) =>
-                                ManageProductsScreen(),
-                          ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: 12),
-                    Expanded(
-                      child: _ActionCard(
-                        icon: Icons.receipt_long_rounded,
-                        title: _isSuperAdmin
-                            ? 'All Orders'
-                            : 'My Orders',
-                        subtitle: 'Order management',
-                        onTap: () =>
-                            Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (_) => AdminOrdersScreen(),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 12),
-                Row(
-                  children: [
-                    Expanded(
-                      child: _ActionCard(
-                        icon: Icons.local_shipping_outlined,
-                        title: _isSuperAdmin
-                            ? 'All Deliveries'
-                            : 'My Deliveries',
-                        subtitle: 'Delivery tracking',
-                        onTap: () =>
-                            Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (_) => AdminRidesScreen(),
-                          ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: 12),
-                    Expanded(
-                      child: _ActionCard(
-                        icon: Icons.category_outlined,
-                        title: 'Categories',
-                        subtitle: 'Product categories',
-                        onTap: () =>
-                            Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (_) =>
-                                const ManageCategoriesScreen(),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 12),
-                Row(
-                  children: [
-                    Expanded(
-                      child: _ActionCard(
-                        icon: _isSuperAdmin
-                            ? Icons.location_city_rounded
-                            : Icons.visibility_outlined,
-                        title: _isSuperAdmin
-                            ? 'Locations'
-                            : 'User Preview',
-                        subtitle: _isSuperAdmin
-                            ? 'Admin coverage'
-                            : 'View as customer',
-                        onTap: _isSuperAdmin
-                            ? () => Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                    builder: (_) =>
-                                        const ManageAdminLocationsScreen(),
-                                  ),
-                                )
-                            : _switchToUserView,
-                      ),
-                    ),
-                    const SizedBox(width: 12),
-                    // Placeholder to keep grid balanced
-                    const Expanded(child: SizedBox()),
-                  ],
-                ),
-
-                // ── Super Admin only ─────────────────────
-                if (_isSuperAdmin) ...[
-                  const SizedBox(height: 12),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: _ActionCard(
-                          icon: Icons.payments_rounded,
-                          title: 'Payment',
-                          subtitle: 'Payment settings',
-                          onTap: () =>
-                              Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (_) =>
-                                  const PaymentSettingsScreen(),
-                            ),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: _ActionCard(
-                          icon: Icons.visibility_outlined,
-                          title: 'User Preview',
-                          subtitle: 'View as customer',
-                          onTap: _switchToUserView,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 12),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: _ActionCard(
-                          icon: Icons.warning_amber_rounded,
-                          title: 'Escalations',
-                          subtitle: 'Unassigned orders',
-                          onTap: () =>
-                              Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (_) =>
-                                  AdminEscalationDashboardScreen(),
-                            ),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: _ActionCard(
-                          icon: Icons.analytics_rounded,
-                          title: 'Analytics',
-                          subtitle: 'Sales & performance',
-                          onTap: () =>
-                              Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (_) =>
-                                  const SuperAdminAnalyticsScreen(),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
+                _buildQuickActions(context),
                 const SizedBox(height: 18),
 
                 // ── Add Admin Panel (Super Admin only) ───
@@ -2319,6 +2263,22 @@ class _StatCard extends StatelessWidget {
 
 // ── Action Card ────────────────────────────────────────────────────────────────
 
+class _ActionItem {
+  const _ActionItem({
+    required this.icon,
+    required this.title,
+    required this.subtitle,
+    required this.onTap,
+    this.highlighted = false,
+  });
+
+  final IconData icon;
+  final String title;
+  final String subtitle;
+  final VoidCallback onTap;
+  final bool highlighted;
+}
+
 class _ActionCard extends StatelessWidget {
   const _ActionCard({
     required this.icon,
@@ -2326,6 +2286,7 @@ class _ActionCard extends StatelessWidget {
     required this.onTap,
     this.subtitle = '',
     this.isHighlighted = false,
+    this.large = false,
   });
 
   final IconData icon;
@@ -2333,6 +2294,7 @@ class _ActionCard extends StatelessWidget {
   final String subtitle;
   final VoidCallback onTap;
   final bool isHighlighted;
+  final bool large;
 
   @override
   Widget build(BuildContext context) {
@@ -2347,7 +2309,7 @@ class _ActionCard extends StatelessWidget {
         onTap: onTap,
         borderRadius: BorderRadius.circular(18),
         child: Container(
-          padding: const EdgeInsets.all(14),
+          padding: EdgeInsets.all(large ? 20 : 14),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(18),
             border: Border.all(
@@ -2360,7 +2322,7 @@ class _ActionCard extends StatelessWidget {
           child: Row(
             children: [
               Container(
-                padding: const EdgeInsets.all(8),
+                padding: EdgeInsets.all(large ? 12 : 8),
                 decoration: BoxDecoration(
                   color: isHighlighted
                       ? colors.brandPrimary
@@ -2372,10 +2334,10 @@ class _ActionCard extends StatelessWidget {
                   color: isHighlighted
                       ? Colors.black
                       : colors.brandPrimary,
-                  size: 18,
+                  size: large ? 26 : 18,
                 ),
               ),
-              const SizedBox(width: 10),
+              SizedBox(width: large ? 14 : 10),
               Expanded(
                 child: Column(
                   crossAxisAlignment:
@@ -2388,7 +2350,7 @@ class _ActionCard extends StatelessWidget {
                         fontWeight: isHighlighted
                             ? FontWeight.w700
                             : FontWeight.w600,
-                        fontSize: 12.5,
+                        fontSize: large ? 15 : 12.5,
                       ),
                     ),
                     if (subtitle.isNotEmpty)
@@ -2396,7 +2358,7 @@ class _ActionCard extends StatelessWidget {
                         subtitle,
                         style: GoogleFonts.poppins(
                           color: colors.textSecondary,
-                          fontSize: 10.5,
+                          fontSize: large ? 12.5 : 10.5,
                         ),
                       ),
                   ],
@@ -2405,7 +2367,7 @@ class _ActionCard extends StatelessWidget {
               Icon(
                 Icons.chevron_right_rounded,
                 color: colors.textSecondary,
-                size: 18,
+                size: large ? 22 : 18,
               ),
             ],
           ),
