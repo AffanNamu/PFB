@@ -252,7 +252,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   Future<void> _openWhatsAppSupport() async {
     final uri = Uri.parse(
-      'https://wa.me/2340000000000?text=Hello%20Phlakes%20Fabrics%20support',
+      'https://wa.me/2340000000000?text=Hello%20Sakash%20Collection%20support',
     );
     try {
       if (await canLaunchUrl(uri)) {
@@ -274,7 +274,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Future<void> _showAboutDialog() async {
     await AppDialogs.info(
       context: context,
-      title:   'Phlakes Fabrics',
+      title:   'Sakash Collection',
       message:
           'Premium African fabrics, textiles & traditional products '
           'delivered to your doorstep.\n\nVersion 1.0.0',
@@ -289,7 +289,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     final confirm = await AppDialogs.confirm(
       context:     context,
       title:       'Log out',
-      message:     'Are you sure you want to log out of Phlakes Fabrics?',
+      message:     'Are you sure you want to log out of Sakash Collection?',
       confirmText: 'Log out',
       destructive: true,
       icon:        Icons.logout_rounded,
@@ -330,7 +330,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 AppBottomSheets.sheetHeader(
                   ctx,
                   title:    'Notification Sound',
-                  subtitle: 'Choose how Phlakes Fabrics alerts sound',
+                  subtitle: 'Choose how Sakash Collection alerts sound',
                 ),
                 const SizedBox(height: 16),
                 ...sounds.map((sound) {
@@ -412,7 +412,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 borderRadius: BorderRadius.circular(24),
                 child: Column(
                   children: [
-                    // Phlakes Logo Avatar
+                    // Sakash Logo Avatar
                     Container(
                       width:  100,
                       height: 100,
@@ -451,7 +451,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                     const SizedBox(height: 20),
                     Text(
-                      'Welcome to Phlakes Fabrics',
+                      'Welcome to Sakash Collection',
                       style: GoogleFonts.poppins(
                         fontSize:   20,
                         fontWeight: FontWeight.w700,
@@ -488,7 +488,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     Text(
                       'Browse our premium collection freely. Sign in to save '
                       'favourites, track orders, manage addresses, and enjoy '
-                      'the full Phlakes Fabrics experience.',
+                      'the full Sakash Collection experience.',
                       textAlign: TextAlign.center,
                       style: GoogleFonts.poppins(
                         fontSize: 13,
@@ -565,19 +565,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
               _ProfileTile(
                 icon:     Icons.support_agent_rounded,
                 title:    'Help & Support',
-                subtitle: 'Chat with Phlakes Fabrics support on WhatsApp',
+                subtitle: 'Chat with Sakash Collection support on WhatsApp',
                 onTap:    _openWhatsAppSupport,
               ),
               _ProfileTile(
                 icon:     Icons.info_outline_rounded,
-                title:    'About Phlakes Fabrics',
+                title:    'About Sakash Collection',
                 subtitle: 'Learn more about us',
                 onTap:    _showAboutDialog,
               ),
               const SizedBox(height: 28),
               Center(
                 child: Text(
-                  'Phlakes Fabrics · Version 1.0.0',
+                  'Sakash Collection · Version 1.0.0',
                   style: GoogleFonts.poppins(
                     fontSize: 11,
                     color:    colors.textSecondary.withOpacity(0.6),
@@ -609,7 +609,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
         final profile        = snapshot.data ?? {};
         final name           = (profile['displayName'] ?? '').toString();
-        final displayName    = name.isNotEmpty ? name : 'Phlakes Member';
+        final displayName    = name.isNotEmpty ? name : 'Sakash Member';
         final email          = (profile['email'] ?? '').toString();
         final displayEmail   = email.isNotEmpty ? email : 'No email';
         final photoUrl       = (profile['photoUrl'] ?? '').toString();
@@ -797,7 +797,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   ],
                                 ),
                                 child: Text(
-                                  'PHLAKES MEMBER',
+                                  'SAKASH MEMBER',
                                   style: GoogleFonts.cinzel(
                                     color:         AppPalette.secondary,
                                     fontSize:      9,
@@ -1152,12 +1152,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   _ProfileTile(
                     icon:     Icons.support_agent_rounded,
                     title:    'Help & Support',
-                    subtitle: 'Chat with Phlakes Fabrics support on WhatsApp',
+                    subtitle: 'Chat with Sakash Collection support on WhatsApp',
                     onTap:    _openWhatsAppSupport,
                   ),
                   _ProfileTile(
                     icon:     Icons.info_outline_rounded,
-                    title:    'About Phlakes Fabrics',
+                    title:    'About Sakash Collection',
                     subtitle: 'Premium luxury fabrics since day one',
                     onTap:    _showAboutDialog,
                   ),
@@ -1200,7 +1200,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   const SizedBox(height: 24),
                   Center(
                     child: Text(
-                      'Phlakes Fabrics · Version 1.2.0',
+                      'Sakash Collection · Version 1.2.0',
                       style: GoogleFonts.poppins(
                         fontSize: 11,
                         color:    colors.textSecondary.withOpacity(0.6),

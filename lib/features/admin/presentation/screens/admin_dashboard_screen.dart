@@ -287,7 +287,7 @@ class _AdminDashboardScreenState
                 ),
               ),
               content: Text(
-                'You are about to sign out of the Phlakes Fabrics admin account.',
+                'You are about to sign out of the Sakash Collection admin account.',
                 style: GoogleFonts.poppins(
                   fontSize: 13,
                   height: 1.5,
@@ -976,7 +976,7 @@ class _AdminDashboardScreenState
                   ),
                   Text(
                     _isSuperAdmin
-                        ? 'Full platform control — Phlakes Fabrics'
+                        ? 'Full platform control — Sakash Collection'
                         : 'Manage your products & assigned orders',
                     style: GoogleFonts.poppins(
                       color: colors.textSecondary,
@@ -1213,8 +1213,8 @@ class _AdminDashboardScreenState
                           children: [
                             Text(
                               _isSuperAdmin
-                                  ? 'Super Admin Mode — Phlakes Fabrics'
-                                  : 'Admin Mode — Phlakes Fabrics',
+                                  ? 'Super Admin Mode — Sakash Collection'
+                                  : 'Admin Mode — Sakash Collection',
                               style: GoogleFonts.poppins(
                                 color: colors.brandPrimary,
                                 fontWeight: FontWeight.w700,
@@ -1363,7 +1363,7 @@ class _AdminDashboardScreenState
                           ),
                           const SizedBox(width: 10),
                           Text(
-                            'Phlakes Fabrics Notifications',
+                            'Sakash Collection Notifications',
                             style: GoogleFonts.poppins(
                               color: colors.textPrimary,
                               fontWeight: FontWeight.w700,
@@ -1414,7 +1414,7 @@ class _AdminDashboardScreenState
                                   ),
                                   const SizedBox(width: 8),
                                   Text(
-                                    'No Phlakes Fabrics notifications yet',
+                                    'No Sakash Collection notifications yet',
                                     style:
                                         GoogleFonts.poppins(
                                       color:
@@ -1972,7 +1972,7 @@ class _AdminDashboardScreenState
                           ),
                           const SizedBox(height: 6),
                           Text(
-                            'Tap "Add Fabric" to upload your first\ntextile product on Phlakes Fabrics',
+                            'Tap "Add Fabric" to upload your first\ntextile product on Sakash Collection',
                             style: GoogleFonts.poppins(
                               color: colors.textSecondary,
                               fontSize: 13,

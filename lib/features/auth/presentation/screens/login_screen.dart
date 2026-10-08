@@ -282,7 +282,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 const SizedBox(height: 6),
                                 Text(
                                   widget.redirectTo == null
-                                      ? 'Sign in to continue your Phlakes Fabrics experience.'
+                                      ? 'Sign in to continue your Sakash Collection experience.'
                                       : 'Sign in to continue where you stopped.',
                                   style: GoogleFonts.poppins(
                                     color: colors.textSecondary,
@@ -641,7 +641,7 @@ class _LoginScreenState extends State<LoginScreen> {
         Column(
           children: [
             Text(
-              'PHLAKES',
+              'SAKASH',
               style: GoogleFonts.cinzel(
                 color: isDark
                     ? Colors.white

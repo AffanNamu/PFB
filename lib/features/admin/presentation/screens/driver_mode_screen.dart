@@ -1,5 +1,5 @@
 // lib/features/admin/presentation/screens/driver_mode_screen.dart
-// ── Phlakes Fabrics — Delivery Dispatch Mode Screen ───────────────────────────
+// ── Sakash Collection — Delivery Dispatch Mode Screen ───────────────────────────
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -168,7 +168,7 @@ class _DriverModeScreenState extends State<DriverModeScreen> {
                     children: [
                       Text(
                         // ── Brand name updated ──────────────────
-                        'Phlakes Fabrics Dispatch',
+                        'Sakash Collection Dispatch',
                         style: GoogleFonts.cinzel(
                           // ── Black text on gold ────────────────
                           color: AppPalette.secondary,

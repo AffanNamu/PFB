@@ -137,7 +137,7 @@ class AdminOrdersScreen extends StatelessWidget {
                       const SizedBox(height: 8),
                       Text(
                         // ── Brand name updated ───────────────────
-                        'Orders will appear here once customers\nplace fabric orders on Phlakes Fabrics.',
+                        'Orders will appear here once customers\nplace fabric orders on Sakash Collection.',
                         textAlign: TextAlign.center,
                         style: GoogleFonts.poppins(
                           color: colors.textSecondary,

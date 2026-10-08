@@ -225,7 +225,7 @@ jobs:
           VERSION_SAFE=$(echo "$VERSION" | tr '+' '-')
           # Build timestamp e.g. "20250115-1430"
           TIMESTAMP=$(date -u +'%Y%m%d-%H%M')
-          APK_NAME="phlakes-fabrics-v${VERSION_SAFE}-${TIMESTAMP}.apk"
+          APK_NAME="sakash-v${VERSION_SAFE}-${TIMESTAMP}.apk"
           mv build/app/outputs/flutter-apk/app-release.apk \
              "build/app/outputs/flutter-apk/${APK_NAME}"
           # Export to env for later steps
@@ -242,7 +242,7 @@ jobs:
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: phlakes-fabrics-apk-${{ env.BUILD_TIMESTAMP }}
+          name: sakash-apk-${{ env.BUILD_TIMESTAMP }}
           path: build/app/outputs/flutter-apk/${{ env.APK_NAME }}
           retention-days: 30
           if-no-files-found: error
@@ -268,9 +268,9 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ env.RELEASE_TAG }}
-          name: "Phlakes Fabrics ${{ env.RELEASE_TAG }}"
+          name: "Sakash ${{ env.RELEASE_TAG }}"
           body: |
-            ## 🟡 Phlakes Fabrics — Release ${{ env.RELEASE_TAG }}
+            ## 🟡 Sakash — Release ${{ env.RELEASE_TAG }}
             **Version:** `${{ env.APP_VERSION }}`
             **Built:** `${{ env.BUILD_TIMESTAMP }} UTC`
             **Branch:** `${{ github.ref_name }}`
@@ -308,7 +308,7 @@ jobs:
         if: always()
         run: |
           echo "=============================================="
-          echo "  PHLAKES FABRICS — BUILD SUMMARY"
+          echo "  SAKASH — BUILD SUMMARY"
           echo "=============================================="
           echo "  APK Name   : ${{ env.APK_NAME }}"
           echo "  Version    : ${{ env.APP_VERSION }}"

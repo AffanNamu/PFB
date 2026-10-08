@@ -327,7 +327,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                 ),
                                 const SizedBox(height: 6),
                                 Text(
-                                  'Join Phlakes Fabrics and discover luxury African textiles.',
+                                  'Join Sakash Collection and discover luxury African textiles.',
                                   style: GoogleFonts.poppins(
                                     color: colors.textSecondary,
                                     fontSize: 13,
@@ -672,7 +672,7 @@ class _SignupScreenState extends State<SignupScreen> {
         Column(
           children: [
             Text(
-              'PHLAKES',
+              'SAKASH',
               style: GoogleFonts.cinzel(
                 color: isDark ? Colors.white : AppPalette.secondary,
                 fontSize: 24,

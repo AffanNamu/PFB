@@ -135,7 +135,7 @@ class _MainShellScreenState extends State<MainShellScreen> {
                   ),
 
                   // ── Bottom Navigation Bar ──────────────────────────
-                  bottomNavigationBar: _PhlakesBottomNav(
+                  bottomNavigationBar: _SakashBottomNav(
                     currentIndex: _currentIndex,
                     cartCount:    cartCount,
                     favCount:     favCount,
@@ -256,9 +256,9 @@ class _AdminPreviewBanner extends StatelessWidget {
   }
 }
 
-// ── Phlakes Bottom Navigation Bar ─────────────────────────────────────────────
+// ── Sakash Bottom Navigation Bar ─────────────────────────────────────────────
 
-class _PhlakesBottomNav extends StatelessWidget {
+class _SakashBottomNav extends StatelessWidget {
   final int currentIndex;
   final int cartCount;
   final int favCount;
@@ -269,7 +269,7 @@ class _PhlakesBottomNav extends StatelessWidget {
   final AppThemeColors colors;
   final bool isDark;
 
-  const _PhlakesBottomNav({
+  const _SakashBottomNav({
     required this.currentIndex,
     required this.cartCount,
     required this.favCount,

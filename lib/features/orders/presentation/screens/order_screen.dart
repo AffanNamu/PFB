@@ -92,7 +92,7 @@ class OrderScreen extends StatelessWidget {
                   const SizedBox(height: 8),
                   Text(
                     // ── Brand name updated ───────────────
-                    'Your Phlakes Fabrics orders will appear here once you place them.',
+                    'Your Sakash Collection orders will appear here once you place them.',
                     textAlign: TextAlign.center,
                     style: GoogleFonts.poppins(
                       fontSize: 13,
@@ -190,7 +190,7 @@ class OrderScreen extends StatelessWidget {
                                 const SizedBox(height: 2),
                                 Text(
                                   // ── Brand updated ──────
-                                  '${order.items.length} item${order.items.length == 1 ? '' : 's'} · Phlakes Fabrics',
+                                  '${order.items.length} item${order.items.length == 1 ? '' : 's'} · Sakash Collection',
                                   style:
                                       GoogleFonts.poppins(
                                     color: colors

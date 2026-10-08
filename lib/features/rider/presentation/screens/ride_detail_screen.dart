@@ -1,5 +1,5 @@
 // lib/features/rider/presentation/screens/ride_detail_screen.dart
-// ── Phlakes Fabrics — Order Detail Tracker Screen ─────────────────────────────
+// ── Sakash Collection — Order Detail Tracker Screen ─────────────────────────────
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

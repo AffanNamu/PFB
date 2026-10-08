@@ -7,7 +7,7 @@ import 'package:pfb/models/order_model.dart';
 import 'package:pfb/shared/widgets/app_surface_card.dart';
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// Phlakes Fabrics Order Detail Screen
+// Sakash Collection Order Detail Screen
 // ═══════════════════════════════════════════════════════════════════════════════
 
 class OrderDetailScreen extends StatelessWidget {
@@ -508,7 +508,7 @@ class OrderDetailScreen extends StatelessWidget {
           // ── Brand name updated ─────────────────────────────
           _DetailRow(
             label: 'Platform',
-            value: 'Phlakes Fabrics',
+            value: 'Sakash Collection',
             colors: colors,
           ),
           _DetailRow(
@@ -831,7 +831,7 @@ class OrderDetailScreen extends StatelessWidget {
           const SizedBox(height: 10),
           Text(
             // ── Brand name updated ─────────────────────────
-            'Contact Phlakes Fabrics support for order issues, returns, or tailoring inquiries.',
+            'Contact Sakash Collection support for order issues, returns, or tailoring inquiries.',
             style: GoogleFonts.poppins(
               fontSize: 12,
               color: colors.textSecondary,

@@ -105,7 +105,7 @@ class PosReceiptPreview extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           const Text(
-            'PHLAKES FABRICS',
+            'SAKASH COLLECTION',
             style: TextStyle(
               color: Colors.black,
               fontWeight: FontWeight.w900,
@@ -411,7 +411,7 @@ class PosReceiptPreview extends StatelessWidget {
         GoldDivider(opacity: 0.4),
         const SizedBox(height: 12),
         Text(
-          'Thank you for shopping at Phlakes Fabrics!',
+          'Thank you for shopping at Sakash Collection!',
           textAlign: TextAlign.center,
           style: TextStyle(
             color: colors.textSecondary,

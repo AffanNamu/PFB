@@ -1,5 +1,5 @@
 // lib/features/rider/presentation/screens/rider_home_screen.dart
-// ── Phlakes Fabrics — Order Tracking Home Screen ──────────────────────────────
+// ── Sakash Collection — Order Tracking Home Screen ──────────────────────────────
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -506,7 +506,7 @@ class _EmptyOrdersState extends StatelessWidget {
             const SizedBox(height: 10),
             Text(
               // ── Brand name updated ───────────────────────
-              'Your Phlakes Fabrics orders will appear here.\nStart shopping for premium African textiles!',
+              'Your Sakash Collection orders will appear here.\nStart shopping for premium African textiles!',
               textAlign: TextAlign.center,
               style: GoogleFonts.poppins(
                 fontSize: 13,
@@ -601,7 +601,7 @@ class _GuestOrdersState extends StatelessWidget {
               const SizedBox(height: 10),
               Text(
                 // ── Brand name updated ─────────────────────
-                'Create an account or sign in to track your\nPhlakes Fabrics deliveries in real time.',
+                'Create an account or sign in to track your\nSakash Collection deliveries in real time.',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.poppins(
                   fontSize: 13,

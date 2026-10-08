@@ -40,7 +40,7 @@ class _IftAppState extends State<IftApp> {
           return AdminPreviewScope(
             controller: _adminPreviewController,
             child: MaterialApp(
-              title: "PhlakesFabric",
+              title: "Sakash",
               debugShowCheckedModeBanner: false,
               navigatorKey: NotificationNavigationService.instance.navigatorKey,
               theme: AppTheme.light(),

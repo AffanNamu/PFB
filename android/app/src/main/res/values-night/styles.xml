@@ -5,13 +5,13 @@
         <item name="android:windowBackground">@drawable/launch_background</item>
         <item name="android:windowFullscreen">false</item>
         <item name="android:windowNoTitle">true</item>
-        <!-- ── Updated to Phlakes Fabrics Black ─────────────────── -->
+        <!-- ── Updated to Sakash Black ─────────────────── -->
         <item name="android:statusBarColor">#0B0B0B</item>
     </style>
 
     <!-- ── Normal Theme (App Running) ───────────────────────────── -->
     <style name="NormalTheme" parent="@android:style/Theme.Black.NoTitleBar">
-        <!-- ── Fixed: Was invalid "#f2", now Phlakes Black ─────── -->
+        <!-- ── Fixed: Was invalid "#f2", now Sakash Black ─────── -->
         <item name="android:windowBackground">#0B0B0B</item>
         <item name="android:windowIsTranslucent">false</item>
     </style>

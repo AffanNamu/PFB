@@ -11,7 +11,7 @@ import 'package:pfb/services/firebase_service.dart';
 import 'package:pfb/services/payment_service.dart';
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// Phlakes Fabrics Cart Screen — Premium Textile Checkout Experience
+// Sakash Collection Cart Screen — Premium Textile Checkout Experience
 // ═══════════════════════════════════════════════════════════════════════════════
 
 class CartScreen extends StatefulWidget {
@@ -131,7 +131,7 @@ class _CartScreenState extends State<CartScreen>
               ),
               content: Text(
                 // ── Brand name updated ───────────────────────────
-                'Please sign in or create a Phlakes Fabrics account to $action.',
+                'Please sign in or create a Sakash Collection account to $action.',
                 style: GoogleFonts.poppins(
                   fontSize: 13.5,
                   height: 1.5,
@@ -231,7 +231,7 @@ class _CartScreenState extends State<CartScreen>
 
     await Future.delayed(const Duration(milliseconds: 800));
 
-    // ── Updated coupon codes to Phlakes Fabrics brand ────────────
+    // ── Updated coupon codes to Sakash Collection brand ────────────
     if (code == 'PF10') {
       setState(() {
         _couponApplied  = true;
@@ -334,7 +334,7 @@ class _CartScreenState extends State<CartScreen>
         metadata: {
           'type':           'cart_checkout',
           // ── Brand name updated ───────────────────────────────
-          'platform':       'Phlakes Fabrics',
+          'platform':       'Sakash Collection',
           'userId':         user.uid,
           'itemsCount':     cartItems.length,
           'itemsTotal':     itemsTotal,
@@ -379,7 +379,7 @@ class _CartScreenState extends State<CartScreen>
         metadata: {
           'type':           'cart_checkout',
           // ── Brand name updated ───────────────────────────────
-          'platform':       'Phlakes Fabrics',
+          'platform':       'Sakash Collection',
           'userId':         user.uid,
           'itemsCount':     cartItems.length,
           'itemsTotal':     itemsTotal,
@@ -635,7 +635,7 @@ class _CartScreenState extends State<CartScreen>
             const SizedBox(height: 10),
             Text(
               // ── Brand name updated ───────────────────────────
-              'Discover premium Ankara, Lace, Aso Oke\nand more from Phlakes Fabrics.',
+              'Discover premium Ankara, Lace, Aso Oke\nand more from Sakash Collection.',
               textAlign: TextAlign.center,
               style: GoogleFonts.poppins(
                 fontSize: 13,

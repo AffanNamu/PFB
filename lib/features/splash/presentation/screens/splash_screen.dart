@@ -290,7 +290,7 @@ class _SplashScreenState extends State<SplashScreen>
       children: [
         ScaleTransition(
           scale: _pulseAnimation,
-          child: _PhlakesLogo(isDark: isDark),
+          child: _SakashLogo(isDark: isDark),
         ),
         const SizedBox(height: 32),
         SlideTransition(
@@ -298,7 +298,7 @@ class _SplashScreenState extends State<SplashScreen>
           child: Column(
             children: [
               Text(
-                'PHLAKES',
+                'SAKASH',
                 style: GoogleFonts.cinzel(
                   color: isDark
                       ? Colors.white
@@ -452,7 +452,7 @@ class _SplashScreenState extends State<SplashScreen>
         ),
         const SizedBox(height: 24),
         Text(
-          'Unable to load Phlakes Fabrics',
+          'Unable to load Sakash Collection',
           style: GoogleFonts.poppins(
             color: colors.textPrimary,
             fontWeight: FontWeight.w700,
@@ -504,11 +504,11 @@ class _SplashScreenState extends State<SplashScreen>
   }
 }
 
-// ── Phlakes Logo ───────────────────────────────────────────────────────────────
+// ── Sakash Logo ───────────────────────────────────────────────────────────────
 
-class _PhlakesLogo extends StatelessWidget {
+class _SakashLogo extends StatelessWidget {
   final bool isDark;
-  const _PhlakesLogo({required this.isDark});
+  const _SakashLogo({required this.isDark});
 
   @override
   Widget build(BuildContext context) {
@@ -544,19 +544,10 @@ class _PhlakesLogo extends StatelessWidget {
           ),
         ),
         Container(
-          width: 82,
-          height: 82,
+          width: 96,
+          height: 96,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            gradient: const LinearGradient(
-              colors: [
-                AppPalette.primaryDark,
-                AppPalette.primary,
-                AppPalette.primaryLight,
-              ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
             boxShadow: [
               BoxShadow(
                 color: AppPalette.primary
@@ -565,44 +556,13 @@ class _PhlakesLogo extends StatelessWidget {
                 spreadRadius: 3,
                 offset: const Offset(0, 6),
               ),
-              BoxShadow(
-                color:
-                    AppPalette.primaryLight.withOpacity(0.20),
-                blurRadius: 12,
-                spreadRadius: 0,
-                offset: Offset.zero,
-              ),
             ],
           ),
-          child: Center(
-            child: Text(
-              'PF',
-              style: GoogleFonts.cinzel(
-                color: AppPalette.secondary,
-                fontSize: 28,
-                fontWeight: FontWeight.w900,
-                letterSpacing: 2,
-              ),
+          child: ClipOval(
+            child: Image.asset(
+              'assets/images/sakash_logo.png',
+              fit: BoxFit.cover,
             ),
-          ),
-        ),
-        Positioned(
-          top: 6,
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: List.generate(7, (i) {
-              return Container(
-                width: 4,
-                height: 4,
-                margin: const EdgeInsets.symmetric(
-                    horizontal: 2),
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: AppPalette.primary.withOpacity(
-                      isDark ? 0.55 : 0.35),
-                ),
-              );
-            }),
           ),
         ),
       ],

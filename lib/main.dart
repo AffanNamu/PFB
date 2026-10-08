@@ -250,7 +250,7 @@ class StartupErrorApp extends StatelessWidget {
                   children: [
                     const Icon(
                       Icons.error_outline,
-                      color: Color(0xFFD4AF37),
+                      color: Color(0xFFF5A30F),
                       size: 56,
                     ),
                     const SizedBox(height: 16),
@@ -266,7 +266,7 @@ class StartupErrorApp extends StatelessWidget {
                     SelectableText(
                       '$error',
                       style: const TextStyle(
-                        color: Color(0xFFD4AF37),
+                        color: Color(0xFFF5A30F),
                         fontSize: 14,
                       ),
                     ),

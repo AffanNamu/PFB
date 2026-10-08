@@ -1,11 +1,11 @@
 {
-    "name": "Phlakes Fabric",
-    "short_name": "PhlakesFabric",
+    "name": "Sakash",
+    "short_name": "Sakash",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0B0B0B",
-    "theme_color": "#C9A84C",
-    "description": "Phlakes Fabric - Luxury African Fabrics & Textiles",
+    "theme_color": "#F5A30F",
+    "description": "Sakash Collection - Online Store",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

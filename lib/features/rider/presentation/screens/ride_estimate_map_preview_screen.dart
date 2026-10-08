@@ -1,5 +1,5 @@
 // lib/features/rider/presentation/screens/ride_estimate_map_preview_screen.dart
-// ── Phlakes Fabrics — Delivery Address Map Preview ────────────────────────────
+// ── Sakash Collection — Delivery Address Map Preview ────────────────────────────
 
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
@@ -214,7 +214,7 @@ class RideEstimateMapPreviewScreen extends StatelessWidget {
                         children: [
                           Text(
                             // ── Brand name updated ─────────
-                            'Phlakes Fabrics Warehouse',
+                            'Sakash Collection Warehouse',
                             style: GoogleFonts.poppins(
                               fontSize: 10,
                               color: colors.textSecondary,

@@ -207,7 +207,7 @@ class _ProductListScreenState extends State<ProductListScreen>
                       ),
                       const SizedBox(width: 12),
                       Text(
-                        'Phlakes Notifications',
+                        'Sakash Notifications',
                         style: GoogleFonts.poppins(
                           fontWeight: FontWeight.w700,
                           fontSize:   18,
@@ -237,7 +237,7 @@ class _ProductListScreenState extends State<ProductListScreen>
                       },
                       icon:  const Icon(Icons.login_rounded),
                       label: Text(
-                        'Sign In to Phlakes Fabrics',
+                        'Sign In to Sakash Collection',
                         style: GoogleFonts.poppins(
                           fontWeight: FontWeight.w700,
                           fontSize:   15,
@@ -835,7 +835,7 @@ class _ProductListScreenState extends State<ProductListScreen>
                     ),
                     const SizedBox(width: 8),
                     Text(
-                      'Phlakes Fabrics',
+                      'Sakash Collection',
                       style: GoogleFonts.playfairDisplay(
                         fontWeight: FontWeight.w800,
                         fontSize:   17,
@@ -1062,7 +1062,7 @@ class _ProductListScreenState extends State<ProductListScreen>
             ),
             const SizedBox(width: 8),
             Text(
-              'Admin Preview Mode — Phlakes Fabrics',
+              'Admin Preview Mode — Sakash Collection',
               style: GoogleFonts.poppins(
                 color:      AppPalette.secondary,
                 fontWeight: FontWeight.w700,
@@ -1412,7 +1412,7 @@ class _ProductListScreenState extends State<ProductListScreen>
             gradient: const LinearGradient(
               colors: [
                 Color(0xFF0B0B0B),
-                Color(0xFF1A1500),
+                Color(0xFF1A1000),
                 AppPalette.primaryDark,
               ],
               stops: [0.0, 0.55, 1.0],
@@ -1570,7 +1570,7 @@ class _ProductListScreenState extends State<ProductListScreen>
       _OccasionData(
         label: 'Birthday',
         emoji: '🎂',
-        color: isDark ? const Color(0xFF1A1500) : const Color(0xFFFFF9C4),
+        color: isDark ? const Color(0xFF1A1000) : const Color(0xFFFFF9C4),
       ),
       _OccasionData(
         label: 'Corporate',
@@ -1749,7 +1749,7 @@ class _ProductListScreenState extends State<ProductListScreen>
       {
         'label': 'Children',
         'emoji': '👧',
-        'color': isDark ? const Color(0xFF1A1500) : const Color(0xFFF9FBE7),
+        'color': isDark ? const Color(0xFF1A1000) : const Color(0xFFF9FBE7),
       },
     ];
 

@@ -1,6 +1,6 @@
 // lib/core/constants/app_constants.dart
 class AppConstants {
-  static const String appName = "Phlakes Fabrics";
+  static const String appName = "Sakash";
 
   // ── Super Admin UIDs ──────────────────────────────────────────────────────
   static const List<String> superAdminUids = [
