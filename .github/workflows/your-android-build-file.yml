@@ -101,24 +101,6 @@ jobs:
           echo "✅ Asset directories ready"
 
       # ================================================================
-      # STEP 6: Download icon assets from Google Drive
-      # ================================================================
-      - name: Download icon assets
-        run: |
-          set -euo pipefail
-          GDRIVE_FILE_ID="1zJ3CQ8PrTaYs5Z4feJV2D6PL3t4CK3vx"
-          OUTPUT="assets/icon.png"
-          curl -L \
-            "https://drive.google.com/uc?export=download&id=${GDRIVE_FILE_ID}" \
-            -o "$OUTPUT"
-          if [ ! -f "$OUTPUT" ]; then
-            echo "❌ Icon download failed!"
-            exit 1
-          fi
-          cp "$OUTPUT" assets/icon_foreground.png
-          echo "✅ Icon downloaded successfully"
-
-      # ================================================================
       # STEP 7: Flutter pub get
       # ================================================================
       - name: Flutter pub get
