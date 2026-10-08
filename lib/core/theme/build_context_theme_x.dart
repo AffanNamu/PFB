@@ -20,10 +20,10 @@ extension BuildContextThemeX on BuildContext {
   /// Premium dark banner gradient
   LinearGradient get premiumBannerGradient => AppGradients.premiumBanner;
 
-  /// Browse Fabrics card gradient
+  /// Browse Products card gradient
   LinearGradient get browseFabricsGradient => AppGradients.browseFabrics;
 
-  /// Fabric Consultation card gradient
+  /// Style Consultation card gradient
   LinearGradient get fabricConsultationGradient =>
       AppGradients.fabricConsultation;
 }

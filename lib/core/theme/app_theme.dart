@@ -15,7 +15,7 @@ import 'package:flutter/material.dart';
 //  Dark Mode Background  → Deep Black     #0B0B0B  (storefront exterior)
 //  Dark Mode Surface     → Dark Charcoal  #161616  (secondary dark panel)
 //
-//  Brand Mood: Luxury Nigerian textile showroom
+//  Brand Mood: Online fashion store
 //              Think Rolex / Louis Vuitton — NOT food delivery
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -100,7 +100,7 @@ class AppPalette {
   /// Ivory — cream-like premium surface
   static const Color ivory       = Color(0xFFFFFBF0);
 
-  /// Warm beige — fabric/textile feel
+  /// Warm beige — soft warm tone
   static const Color warmBeige   = Color(0xFFF8E9D2);
 
   /// Rich brown — warm text on cream
@@ -1272,14 +1272,14 @@ class AppGradients {
     end:    Alignment.bottomCenter,
   );
 
-  /// Browse Fabrics card — gold gradient
+  /// Browse Products card — gold gradient
   static const LinearGradient browseFabrics = LinearGradient(
     colors: [AppPalette.primaryDark, AppPalette.primary, AppPalette.primaryLight],
     begin:  Alignment.topLeft,
     end:    Alignment.bottomRight,
   );
 
-  /// Fabric Consultation card — black gradient
+  /// Style Consultation card — black gradient
   static const LinearGradient fabricConsultation = LinearGradient(
     colors: [Color(0xFF111111), Color(0xFF2A2A2A)],
     begin:  Alignment.topLeft,

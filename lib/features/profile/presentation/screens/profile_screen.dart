@@ -276,7 +276,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       context: context,
       title:   'Sakash Collection',
       message:
-          'Premium African fabrics, textiles & traditional products '
+          'Quality fashion and lifestyle products '
           'delivered to your doorstep.\n\nVersion 1.0.0',
       icon: Icons.info_outline_rounded,
     );
@@ -439,7 +439,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                       child: Center(
                         child: Text(
-                          'PF',
+                          'S',
                           style: GoogleFonts.cinzel(
                             color:       AppPalette.secondary,
                             fontSize:    26,
@@ -475,7 +475,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Text(
-                        'LUXURY FABRICS',
+                        'SAKASH COLLECTION',
                         style: GoogleFonts.cinzel(
                           color:         AppPalette.secondary,
                           fontSize:      10,
@@ -542,7 +542,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               _ProfileTile(
                 icon:     Icons.favorite_border_rounded,
                 title:    'Favourites',
-                subtitle: 'Sign in to save your favourite fabrics',
+                subtitle: 'Sign in to save your favourite items',
                 onTap:    _goToLogin,
               ),
               _ProfileTile(
@@ -1117,7 +1117,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   _ProfileTile(
                     icon:     Icons.favorite_border_rounded,
                     title:    'Favourites',
-                    subtitle: 'View all your favourite fabrics',
+                    subtitle: 'View all your favourite items',
                     onTap: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
@@ -1158,7 +1158,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   _ProfileTile(
                     icon:     Icons.info_outline_rounded,
                     title:    'About Sakash Collection',
-                    subtitle: 'Premium luxury fabrics since day one',
+                    subtitle: 'Quality you can trust',
                     onTap:    _showAboutDialog,
                   ),
                   const SizedBox(height: 24),

@@ -128,7 +128,7 @@ class _AddProductScreenState extends State<AddProductScreen>
 
   final List<String> _steps = [
     'Basic Info',
-    'Fabric Details',
+    'Product Details',
     'Colors & Sizes',
     'Images',
     'Flags & Pricing',
@@ -333,7 +333,7 @@ class _AddProductScreenState extends State<AddProductScreen>
     final colors = context.appColors;
 
     return AppPageScaffold(
-      title: 'Add Fabric Product',
+      title: 'Add Product',
       body: Column(
         children: [
           _buildStepIndicator(colors),
@@ -500,14 +500,14 @@ class _AddProductScreenState extends State<AddProductScreen>
     );
   }
 
-  // ── STEP 1 — Fabric Details ───────────────────────────────────
+  // ── STEP 1 — Product Details ───────────────────────────────────
 
   Widget _buildStep1FabricDetails(dynamic colors) {
     return ListView(
       padding: const EdgeInsets.all(16),
       children: [
         _StepCard(
-          title: 'Fabric Type',
+          title: 'Product Type',
           icon: Icons.style_rounded,
           colors: colors,
           children: [
@@ -633,7 +633,7 @@ class _AddProductScreenState extends State<AddProductScreen>
           colors: colors,
           children: [
             Text(
-              'Select all available colors for this fabric',
+              'Select all available colors for this item',
               style: GoogleFonts.poppins(
                 fontSize: 12,
                 color: colors.textSecondary,

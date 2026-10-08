@@ -41,7 +41,7 @@ class FirebaseAuthService {
     try {
       if (kDebugMode) {
         debugPrint(
-            '🔐 PhlakesFabric | Checking redirect result…');
+            '🔐 Sakash | Checking redirect result…');
       }
 
       final result = await _firebaseAuth
@@ -53,7 +53,7 @@ class FirebaseAuthService {
       if (user != null) {
         if (kDebugMode) {
           debugPrint(
-              '🔐 PhlakesFabric | ✅ Redirect sign-in resolved → '
+              '🔐 Sakash | ✅ Redirect sign-in resolved → '
               'uid=${user.uid} email=${user.email}');
         }
         try {
@@ -64,14 +64,14 @@ class FirebaseAuthService {
 
       if (kDebugMode) {
         debugPrint(
-            '🔐 PhlakesFabric | No pending redirect '
+            '🔐 Sakash | No pending redirect '
             '(normal cold start)');
       }
       return null;
     } on FirebaseAuthException catch (e) {
       if (kDebugMode) {
         debugPrint(
-            '🔐 PhlakesFabric | getRedirectResult '
+            '🔐 Sakash | getRedirectResult '
             'FirebaseAuthException: code=${e.code}');
       }
       // no-auth-event = no redirect pending, totally normal
@@ -83,7 +83,7 @@ class FirebaseAuthService {
     } catch (e) {
       if (kDebugMode) {
         debugPrint(
-            '🔐 PhlakesFabric | getRedirectResult unknown: $e');
+            '🔐 Sakash | getRedirectResult unknown: $e');
       }
       return null;
     }
@@ -149,7 +149,7 @@ class FirebaseAuthService {
     try {
       if (kDebugMode) {
         debugPrint(
-            '🔐 PhlakesFabric | Google Sign-In start '
+            '🔐 Sakash | Google Sign-In start '
             '(kIsWeb=$kIsWeb)');
       }
 
@@ -161,21 +161,21 @@ class FirebaseAuthService {
     } on FirebaseAuthException catch (e) {
       if (kDebugMode) {
         debugPrint(
-            '🔐 PhlakesFabric | FirebaseAuthException: '
+            '🔐 Sakash | FirebaseAuthException: '
             'code=${e.code} message=${e.message}');
       }
       throw AuthFailure(_mapFirebaseError(e.code, e.message));
     } on PlatformException catch (e) {
       if (kDebugMode) {
         debugPrint(
-            '🔐 PhlakesFabric | PlatformException: '
+            '🔐 Sakash | PlatformException: '
             'code=${e.code} message=${e.message}');
       }
       throw AuthFailure(_mapGooglePlatformError(e));
     } catch (e) {
       if (e is AuthFailure) rethrow;
       if (kDebugMode) {
-        debugPrint('🔐 PhlakesFabric | Unknown: $e');
+        debugPrint('🔐 Sakash | Unknown: $e');
       }
       throw AuthFailure(
           'Google Sign-In failed. Please try again.');
@@ -191,7 +191,7 @@ class FirebaseAuthService {
 
     if (kDebugMode) {
       debugPrint(
-          '🔐 PhlakesFabric | Web: calling signInWithRedirect…\n'
+          '🔐 Sakash | Web: calling signInWithRedirect…\n'
           '  authDomain will handle redirect at:\n'
           '  https://phlakesfabric.web.app/__/auth/handler');
     }
@@ -216,7 +216,7 @@ class FirebaseAuthService {
 
     if (kDebugMode) {
       debugPrint(
-          '🔐 PhlakesFabric | Android: account selected '
+          '🔐 Sakash | Android: account selected '
           '${googleUser.email}');
     }
 
@@ -249,7 +249,7 @@ class FirebaseAuthService {
 
     if (kDebugMode) {
       debugPrint(
-          '🔐 PhlakesFabric | Android success uid=${user.uid}');
+          '🔐 Sakash | Android success uid=${user.uid}');
     }
 
     return user;
@@ -270,7 +270,7 @@ class FirebaseAuthService {
     await _firebaseAuth.signOut();
 
     if (kDebugMode) {
-      debugPrint('🔐 PhlakesFabric | Signed out');
+      debugPrint('🔐 Sakash | Signed out');
     }
   }
 

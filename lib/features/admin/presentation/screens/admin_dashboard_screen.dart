@@ -365,7 +365,7 @@ class _AdminDashboardScreenState
                     children: [
                       Expanded(
                         child: _StatCard(
-                          title: 'Fabric Products',
+                          title: 'Products',
                           value: '${pSnap.data ?? 0}',
                           icon: Icons.texture_rounded,
                           color: colors.brandPrimary,
@@ -477,7 +477,7 @@ class _AdminDashboardScreenState
                 Expanded(
                   child: _StatCard(
                     title: 'Platform',
-                    value: 'PF',
+                    value: 'S',
                     icon: Icons.storefront_rounded,
                     color: colors.brandPrimary,
                   ),
@@ -949,7 +949,7 @@ class _AdminDashboardScreenState
                 ],
               ),
               child: Text(
-                'PF',
+                'S',
                 style: GoogleFonts.cinzel(
                   color: AppPalette.secondary,
                   fontSize: 13,
@@ -1138,7 +1138,7 @@ class _AdminDashboardScreenState
             child: const Icon(Icons.point_of_sale_rounded),
           ),
           const SizedBox(height: 12),
-          // Add Fabric FAB
+          // Add Product FAB
           FloatingActionButton.extended(
             heroTag: 'add_fabric_fab',
             backgroundColor: colors.brandPrimary,
@@ -1153,7 +1153,7 @@ class _AdminDashboardScreenState
             },
             icon: const Icon(Icons.add_rounded),
             label: Text(
-              'Add Fabric',
+              'Add Product',
               style: GoogleFonts.poppins(
                   fontWeight: FontWeight.w700),
             ),
@@ -1224,8 +1224,8 @@ class _AdminDashboardScreenState
                             const SizedBox(height: 2),
                             Text(
                               _isSuperAdmin
-                                  ? 'Full control over fabrics, orders, admins & analytics.'
-                                  : 'Manage your uploaded fabrics, categories & assigned orders.',
+                                  ? 'Full control over products, orders, admins & analytics.'
+                                  : 'Manage your uploaded products, categories & assigned orders.',
                               style: GoogleFonts.poppins(
                                 color: colors.textSecondary,
                                 fontSize: 11.5,
@@ -1576,7 +1576,7 @@ class _AdminDashboardScreenState
                     Expanded(
                       child: _ActionCard(
                         icon: Icons.add_box_outlined,
-                        title: 'Add Fabric',
+                        title: 'Add Product',
                         subtitle: 'Upload new product',
                         onTap: () =>
                             Navigator.of(context).push(
@@ -1647,7 +1647,7 @@ class _AdminDashboardScreenState
                       child: _ActionCard(
                         icon: Icons.category_outlined,
                         title: 'Categories',
-                        subtitle: 'Fabric categories',
+                        subtitle: 'Product categories',
                         onTap: () =>
                             Navigator.of(context).push(
                           MaterialPageRoute(
@@ -1904,7 +1904,7 @@ class _AdminDashboardScreenState
                     ),
                     const SizedBox(width: 8),
                     Text(
-                      'My Fabric Products',
+                      'My Products',
                       style: GoogleFonts.poppins(
                         color: colors.textPrimary,
                         fontWeight: FontWeight.w700,
@@ -1962,7 +1962,7 @@ class _AdminDashboardScreenState
                           ),
                           const SizedBox(height: 12),
                           Text(
-                            'No fabric products yet',
+                            'No products yet',
                             style:
                                 GoogleFonts.playfairDisplay(
                               fontSize: 18,
@@ -1972,7 +1972,7 @@ class _AdminDashboardScreenState
                           ),
                           const SizedBox(height: 6),
                           Text(
-                            'Tap "Add Fabric" to upload your first\ntextile product on Sakash Collection',
+                            'Tap "Add Product" to upload your first\nproduct on Sakash Collection',
                             style: GoogleFonts.poppins(
                               color: colors.textSecondary,
                               fontSize: 13,

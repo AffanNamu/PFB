@@ -74,7 +74,7 @@ class _PosProductSearchPanelState
             onChanged: widget.onSearchChanged,
             decoration: InputDecoration(
               hintText:
-                  'Search fabrics by name, category...',
+                  'Search products by name, category...',
               prefixIcon: Icon(Icons.search_rounded,
                   color: colors.textSecondary),
               suffixIcon: _searchCtrl.text.isNotEmpty

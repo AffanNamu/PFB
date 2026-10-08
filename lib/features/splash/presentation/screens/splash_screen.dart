@@ -341,7 +341,7 @@ class _SplashScreenState extends State<SplashScreen>
                       ],
                     ).createShader(bounds),
                     child: Text(
-                      'FABRICS',
+                      'COLLECTION',
                       style: GoogleFonts.cinzel(
                         color: Colors.white,
                         fontSize: 22,
@@ -373,7 +373,7 @@ class _SplashScreenState extends State<SplashScreen>
               ),
               const SizedBox(height: 10),
               Text(
-                'Luxury African Fabrics & Textiles',
+                'Online Store',
                 style: GoogleFonts.poppins(
                   color: isDark
                       ? colors.textSecondary

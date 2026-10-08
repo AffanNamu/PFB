@@ -327,7 +327,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                 ),
                                 const SizedBox(height: 6),
                                 Text(
-                                  'Join Sakash Collection and discover luxury African textiles.',
+                                  'Join Sakash Collection and discover our latest collection.',
                                   style: GoogleFonts.poppins(
                                     color: colors.textSecondary,
                                     fontSize: 13,
@@ -658,7 +658,7 @@ class _SignupScreenState extends State<SignupScreen> {
           ),
           child: Center(
             child: Text(
-              'PF',
+              'S',
               style: GoogleFonts.cinzel(
                 color: AppPalette.secondary,
                 fontSize: 22,
@@ -689,7 +689,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 ],
               ).createShader(bounds),
               child: Text(
-                'FABRICS',
+                'COLLECTION',
                 style: GoogleFonts.cinzel(
                   color: Colors.white,
                   fontSize: 18,
@@ -716,7 +716,7 @@ class _SignupScreenState extends State<SignupScreen> {
         ),
         const SizedBox(height: 8),
         Text(
-          'Luxury African Fabrics & Textiles',
+          'Online Store',
           style: GoogleFonts.poppins(
             color: colors.textSecondary,
             fontSize: 12.5,

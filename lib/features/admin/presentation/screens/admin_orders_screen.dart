@@ -137,7 +137,7 @@ class AdminOrdersScreen extends StatelessWidget {
                       const SizedBox(height: 8),
                       Text(
                         // ── Brand name updated ───────────────────
-                        'Orders will appear here once customers\nplace fabric orders on Sakash Collection.',
+                        'Orders will appear here once customers\nplace orders on Sakash Collection.',
                         textAlign: TextAlign.center,
                         style: GoogleFonts.poppins(
                           color: colors.textSecondary,
@@ -256,7 +256,7 @@ class _AdminOrderCard extends StatelessWidget {
               ),
               child: Column(
                 children: order.items.take(2).map((item) {
-                  final name = item['name'] ?? 'Fabric Item';
+                  final name = item['name'] ?? 'Item';
                   final qty = item['quantity'] ?? 1;
                   final price = (item['price'] ?? 0.0) as num;
                   final fabricType = item['fabricType'] ?? '';

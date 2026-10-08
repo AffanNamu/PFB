@@ -421,7 +421,7 @@ class PosReceiptPreview extends StatelessWidget {
         ),
         const SizedBox(height: 4),
         Text(
-          'Premium Fabrics • Quality Assured',
+          'Quality Assured • Thank You',
           textAlign: TextAlign.center,
           style: TextStyle(
             color: colors.brandPrimary,

@@ -34,9 +34,9 @@ class _ManageAdminLocationsScreenState
       context: context,
       isScrollControlled: true,
       child: PremiumLocationPickerBottomSheet(
-        title: 'Set PhlakesFabric Warehouse / Pickup Location',
+        title: 'Set Sakash Warehouse / Pickup Location',
         hintText:
-            'Search fabric warehouse or shop location in Nigeria',
+            'Search warehouse or shop location in Nigeria',
         initialValue: currentAddress,
       ),
     );
@@ -249,7 +249,7 @@ class _ManageAdminLocationsScreenState
                                 CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'PhlakesFabric Warehouse / Pickup',
+                                'Sakash Warehouse / Pickup',
                                 style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.w700,
                                   color: colors.textPrimary,
@@ -257,7 +257,7 @@ class _ManageAdminLocationsScreenState
                                 ),
                               ),
                               Text(
-                                'The origin address for all fabric deliveries',
+                                'The origin address for all deliveries',
                                 style: GoogleFonts.poppins(
                                   color: colors.textSecondary,
                                   fontSize: 11,
@@ -557,7 +557,7 @@ class _ManageAdminLocationsScreenState
                                   ),
                                   Text(
                                     myActive
-                                        ? 'New textile orders will be assigned to you'
+                                        ? 'New orders will be assigned to you'
                                         : 'Turn on to receive order assignments',
                                     style: GoogleFonts.poppins(
                                       color: colors.textSecondary,

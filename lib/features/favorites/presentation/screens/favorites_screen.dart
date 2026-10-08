@@ -195,7 +195,7 @@ class FavoritesScreen extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             Text(
-              'Save your favourite Ankara, Lace, Aso Oke\nand other fabrics here for easy access.',
+              'Save your favourite your favourite items here for easy access.',
               textAlign: TextAlign.center,
               style: GoogleFonts.poppins(
                 fontSize: 13,

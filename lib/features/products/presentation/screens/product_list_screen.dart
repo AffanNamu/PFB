@@ -218,7 +218,7 @@ class _ProductListScreenState extends State<ProductListScreen>
                   ),
                   const SizedBox(height: 12),
                   Text(
-                    'Sign in to receive updates on your fabric orders, '
+                    'Sign in to receive updates on your orders, '
                     'new arrivals, exclusive deals & delivery tracking.',
                     style: GoogleFonts.poppins(
                       fontSize: 13,
@@ -456,7 +456,7 @@ class _ProductListScreenState extends State<ProductListScreen>
                           SliverToBoxAdapter(
                             child: _buildSectionHeader(
                               colors,
-                              title: 'Browse by Fabric',
+                              title: 'Browse by Category',
                             ),
                           ),
                           SliverToBoxAdapter(
@@ -480,7 +480,7 @@ class _ProductListScreenState extends State<ProductListScreen>
                           if (trendingItems.isEmpty)
                             _buildEmptySliver(
                               icon:     Icons.local_fire_department_outlined,
-                              title:    'No trending fabrics yet',
+                              title:    'No trending products yet',
                               subtitle: 'Mark products as trending from admin panel.',
                             )
                           else
@@ -824,7 +824,7 @@ class _ProductListScreenState extends State<ProductListScreen>
                         ],
                       ),
                       child: Text(
-                        'PF',
+                        'S',
                         style: GoogleFonts.cinzel(
                           color:         AppPalette.secondary,
                           fontSize:      12,
@@ -847,7 +847,7 @@ class _ProductListScreenState extends State<ProductListScreen>
                 const SizedBox(height: 3),
                 Text(
                   _isGuest
-                      ? '👋 Welcome! Discover luxury fabrics'
+                      ? '👋 Welcome! Discover our collection'
                       : '👋 Welcome back, $displayName',
                   style: GoogleFonts.poppins(
                     color:      colors.textSecondary,
@@ -1259,10 +1259,10 @@ class _ProductListScreenState extends State<ProductListScreen>
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Row(
         children: [
-          // Browse Fabrics — gold gradient
+          // Browse Products — gold gradient
           Expanded(
             child: _MainActionCard(
-              title:    'Browse\nFabrics',
+              title:    'Browse\nProducts',
               subtitle: 'Ankara, Lace & more',
               icon:     Icons.style_rounded,
               gradientColors: const [
@@ -1290,7 +1290,7 @@ class _ProductListScreenState extends State<ProductListScreen>
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     content: Text(
-                      '✂️ Fabric Consultation — Coming Soon!',
+                      '✂️ Style Consultation — Coming Soon!',
                       style: GoogleFonts.poppins(
                         fontWeight: FontWeight.w600,
                       ),
@@ -1458,7 +1458,7 @@ class _ProductListScreenState extends State<ProductListScreen>
                     const SizedBox(height: 10),
                     Text(
                       _isGuest
-                          ? 'Sign in & get 25% off your first fabric order!'
+                          ? 'Sign in & get 25% off your first order!'
                           : 'Premium Ankara & Lace — Up to 30% OFF this week!',
                       style: GoogleFonts.poppins(
                         color:      Colors.white,
@@ -1529,7 +1529,7 @@ class _ProductListScreenState extends State<ProductListScreen>
                 ),
                 child: Center(
                   child: Text(
-                    'PF',
+                    'S',
                     style: GoogleFonts.cinzel(
                       color:         AppPalette.secondary,
                       fontSize:      20,

@@ -627,7 +627,7 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
           child: Center(
             child: Text(
-              'PF',
+              'S',
               style: GoogleFonts.cinzel(
                 color: AppPalette.secondary,
                 fontSize: 26,
@@ -661,7 +661,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ],
               ).createShader(bounds),
               child: Text(
-                'FABRICS',
+                'COLLECTION',
                 style: GoogleFonts.cinzel(
                   color: Colors.white,
                   fontSize: 20,
@@ -688,7 +688,7 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
         const SizedBox(height: 10),
         Text(
-          'Luxury African Fabrics & Textiles',
+          'Online Store',
           style: GoogleFonts.poppins(
             color: colors.textSecondary,
             fontSize: 13,

@@ -1,4 +1,4 @@
-// ── PhlakesFabric — ride_model.dart ───────────────────────────────────────────────
+// ── Sakash — ride_model.dart ───────────────────────────────────────────────
 // This model is KEPT because driver_mode_screen.dart (admin delivery dispatch
 // screen) still references it during this transition batch.
 //

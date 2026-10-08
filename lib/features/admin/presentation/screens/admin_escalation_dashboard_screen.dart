@@ -110,7 +110,7 @@ class AdminEscalationDashboardScreen extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  'Escalated Textile Orders',
+                                  'Escalated Orders',
                                   style: GoogleFonts.poppins(
                                     color: colors.textPrimary,
                                     fontWeight: FontWeight.w700,
@@ -222,7 +222,7 @@ class AdminEscalationDashboardScreen extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             Text(
-              'No escalated orders at this time.\nAll PhlakesFabric orders are being handled.',
+              'No escalated orders at this time.\nAll Sakash orders are being handled.',
               textAlign: TextAlign.center,
               style: GoogleFonts.poppins(
                 color: colors.textSecondary,

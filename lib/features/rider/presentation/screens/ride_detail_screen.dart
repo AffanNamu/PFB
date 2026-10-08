@@ -195,7 +195,7 @@ class RideDetailScreen extends StatelessWidget {
                   const SizedBox(height: 12),
                   ...order.items.map((item) {
                     final name =
-                        item['name'] ?? 'Fabric Item';
+                        item['name'] ?? 'Item';
                     final qty = item['quantity'] ??
                         item['qty'] ??
                         1;

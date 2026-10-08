@@ -11,7 +11,7 @@ import 'package:pfb/services/firebase_service.dart';
 import 'package:pfb/services/payment_service.dart';
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// Sakash Collection Cart Screen — Premium Textile Checkout Experience
+// Sakash Collection Cart Screen — Checkout Experience
 // ═══════════════════════════════════════════════════════════════════════════════
 
 class CartScreen extends StatefulWidget {
@@ -277,7 +277,7 @@ class _CartScreenState extends State<CartScreen>
   ) async {
     if (_isGuest) {
       await _showGuestPrompt(
-          'complete checkout and track your fabric delivery');
+          'complete checkout and track your delivery');
       return;
     }
 
@@ -650,7 +650,7 @@ class _CartScreenState extends State<CartScreen>
                 onPressed: () => Navigator.of(context).pop(),
                 icon: const Icon(Icons.style_rounded),
                 label: Text(
-                  'Browse Fabrics',
+                  'Browse Products',
                   style: GoogleFonts.poppins(
                     fontWeight: FontWeight.w700,
                     fontSize: 15,
@@ -693,7 +693,7 @@ class _CartScreenState extends State<CartScreen>
           const SizedBox(width: 10),
           Expanded(
             child: Text(
-              'Shopping as guest. Sign in to checkout, save addresses & track your fabric delivery.',
+              'Shopping as guest. Sign in to checkout, save addresses & track your delivery.',
               style: GoogleFonts.poppins(
                 color: colors.brown,
                 fontSize: 11.5,

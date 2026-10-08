@@ -1,4 +1,4 @@
-// ── PhlakesFabric — Order Delivery Map Screen ─────────────────────────────────────
+// ── Sakash — Order Delivery Map Screen ─────────────────────────────────────
 // Replaces the old ride_map_screen.dart
 // Now shows a live-updating order delivery address map.
 // No longer listens to the rides collection.
@@ -252,7 +252,7 @@ class _RideMapScreenState extends State<RideMapScreen> {
                             ),
                             const SizedBox(width: 8),
                             Text(
-                              '${order.items.length} fabric item${order.items.length == 1 ? '' : 's'}',
+                              '${order.items.length} item${order.items.length == 1 ? '' : 's'}',
                               style: GoogleFonts.poppins(
                                 fontSize: 13,
                                 color: colors.textSecondary,

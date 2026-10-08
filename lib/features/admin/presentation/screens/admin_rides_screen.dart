@@ -1,6 +1,6 @@
-// ── PhlakesFabric — Delivery Tracking Screen ──────────────────────────────────────
+// ── Sakash — Delivery Tracking Screen ──────────────────────────────────────
 // This file replaces the old ride management screen.
-// It now tracks TEXTILE ORDER DELIVERIES only — no ride/taxi references.
+// It now tracks ORDER DELIVERIES only — no ride/taxi references.
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -193,7 +193,7 @@ class AdminRidesScreen extends StatelessWidget {
             const SizedBox(height: 8),
             Text(
               isSuperAdmin
-                  ? 'All textile order deliveries will appear here.'
+                  ? 'All order deliveries will appear here.'
                   : 'Deliveries assigned to your area will appear here.',
               textAlign: TextAlign.center,
               style: GoogleFonts.poppins(
@@ -343,7 +343,7 @@ class _DeliveryCard extends StatelessWidget {
             ),
             const SizedBox(height: 6),
             ...order.items.take(2).map((item) {
-              final name = item['name'] ?? 'Fabric Item';
+              final name = item['name'] ?? 'Item';
               final qty = item['quantity'] ?? item['qty'] ?? 1;
               final fabricType = item['fabricType'] ?? '';
               final color = item['color'] ?? '';

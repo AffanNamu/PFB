@@ -328,7 +328,7 @@ class _OrderCard extends StatelessWidget {
                 order.items
                     .take(2)
                     .map((item) =>
-                        item['name'] ?? 'Fabric')
+                        item['name'] ?? 'Item')
                     .join(', '),
                 style: GoogleFonts.poppins(
                   fontSize: 12,
@@ -506,7 +506,7 @@ class _EmptyOrdersState extends StatelessWidget {
             const SizedBox(height: 10),
             Text(
               // ── Brand name updated ───────────────────────
-              'Your Sakash Collection orders will appear here.\nStart shopping for premium African textiles!',
+              'Your Sakash Collection orders will appear here.\nStart shopping for your favourite items!',
               textAlign: TextAlign.center,
               style: GoogleFonts.poppins(
                 fontSize: 13,

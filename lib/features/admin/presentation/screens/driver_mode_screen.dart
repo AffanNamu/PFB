@@ -272,7 +272,7 @@ class _DriverModeScreenState extends State<DriverModeScreen> {
                     ),
                     child: Column(
                       children: order.items.map((item) {
-                        final name = item['name'] ?? 'Fabric Item';
+                        final name = item['name'] ?? 'Item';
                         final qty =
                             item['quantity'] ?? item['qty'] ?? 1;
                         final fabricType =
@@ -367,7 +367,7 @@ class _DriverModeScreenState extends State<DriverModeScreen> {
                 _DispatchButton(
                   icon: Icons.autorenew_rounded,
                   label: 'Mark as Processing',
-                  subtitle: 'Fabric is being prepared',
+                  subtitle: 'Order is being prepared',
                   color: colors.info,
                   isActive: order.status == 'processing',
                   isBusy: _busy,

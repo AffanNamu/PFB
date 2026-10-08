@@ -977,7 +977,7 @@ class FirebaseService {
               final data = doc.data();
               return {
                 'type': 'product',
-                'title': 'Fabric: ${data['name'] ?? 'Unnamed'}',
+                'title': 'Product: ${data['name'] ?? 'Unnamed'}',
                 'subtitle': '₦${data['price'] ?? 0} · ${data['fabricType'] ?? 'General'}',
                 'createdAt': data['createdAt'] ?? '',
               };
@@ -1505,7 +1505,7 @@ class FirebaseService {
       if (userId.isNotEmpty) {
         await _notifyUser(
           userUid: userId,
-          title: 'Order Update — PhlakesFabric',
+          title: 'Order Update — Sakash',
           body: _orderStatusMessage(status),
           type: 'order_status_update',
           targetScreen: 'order_detail',
@@ -1518,11 +1518,11 @@ class FirebaseService {
   String _orderStatusMessage(String status) {
     switch (status.toLowerCase()) {
       case 'processing':
-        return 'Your fabric order is being processed and prepared for delivery.';
+        return 'Your order is being processed and prepared for delivery.';
       case 'shipped':
         return 'Your order has been shipped and is on its way to you!';
       case 'delivered':
-        return 'Your order has been delivered. Enjoy your fabrics! 🎉';
+        return 'Your order has been delivered. Enjoy your purchase! 🎉';
       case 'cancelled':
         return 'Your order has been cancelled. Contact support if you need help.';
       default:
@@ -1602,8 +1602,8 @@ class FirebaseService {
     try {
       await _notifyUser(
         userUid: user.uid,
-        title: '🎉 Order Placed — PhlakesFabric',
-        body: 'Your fabric order has been placed successfully. We\'ll keep you updated!',
+        title: '🎉 Order Placed — Sakash',
+        body: 'Your order has been placed successfully. We\'ll keep you updated!',
         type: 'order_created',
         targetScreen: 'order_detail',
         targetId: orderId,
@@ -1614,8 +1614,8 @@ class FirebaseService {
       try {
         await _notifyAdmin(
           adminUid: adminResult.adminUid!,
-          title: '📦 New Fabric Order Assigned',
-          body: 'A new textile order has been assigned to your area. Total: ₦${totalAmount.toStringAsFixed(0)}',
+          title: '📦 New Order Assigned',
+          body: 'A new order has been assigned to your area. Total: ₦${totalAmount.toStringAsFixed(0)}',
           type: 'admin_assignment_order',
           targetScreen: 'admin_orders',
           targetId: orderId,
@@ -1627,7 +1627,7 @@ class FirebaseService {
       try {
         await _notifySuperAdminEscalation(
           title: '⚠️ Escalated Order',
-          body: 'A new fabric order could not be auto-assigned. Manual attention needed.',
+          body: 'A new order could not be auto-assigned. Manual attention needed.',
           targetId: orderId,
           type: 'escalation_created',
         );
@@ -1671,8 +1671,8 @@ class FirebaseService {
     try {
       await _notifyAdmin(
         adminUid: adminUid,
-        title: '📦 Order Reassigned — PhlakesFabric',
-        body: 'A textile order has been reassigned to you.',
+        title: '📦 Order Reassigned — Sakash',
+        body: 'An order has been reassigned to you.',
         type: 'admin_request_reassigned',
         targetScreen: 'admin_orders',
         targetId: orderId,
@@ -1694,7 +1694,7 @@ class FirebaseService {
           .map((order) => {
                 'type': 'order',
                 'id': order.id,
-                'title': 'Escalated Textile Order',
+                'title': 'Escalated Orders',
                 'subtitle': order.deliveryAddress,
                 'status': order.status,
                 'createdAt': order.createdAt, // ✅ fixed

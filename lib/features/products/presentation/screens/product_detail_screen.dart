@@ -667,7 +667,7 @@ class _ProductDetailScreenState
                       const SizedBox(height: 20),
                     ],
 
-                    // ── Fabric Details ───────────────────────────
+                    // ── Product Details ───────────────────────────
                     _buildFabricDetailsCard(colors),
 
                     const SizedBox(height: 20),
@@ -1030,7 +1030,7 @@ class _ProductDetailScreenState
     );
   }
 
-  // ── Fabric Details Card ───────────────────────────────────────────────────
+  // ── Product Details Card ───────────────────────────────────────────────────
 
   Widget _buildFabricDetailsCard(AppThemeColors colors) {
     final details = <Map<String, dynamic>>[];
@@ -1044,7 +1044,7 @@ class _ProductDetailScreenState
     if (_product.fabricType.isNotEmpty)
       details.add({
         'icon':  Icons.style_rounded,
-        'label': 'Fabric Type',
+        'label': 'Product Type',
         'value': _product.fabricType,
       });
     if (_product.gsm.isNotEmpty)
@@ -1112,7 +1112,7 @@ class _ProductDetailScreenState
               ),
               const SizedBox(width: 10),
               Text(
-                'Fabric Details',
+                'Product Details',
                 style: GoogleFonts.poppins(
                   fontWeight: FontWeight.w700,
                   fontSize:   15,
@@ -1216,7 +1216,7 @@ class _ProductDetailScreenState
                   ),
                 ),
                 Text(
-                  'Get this fabric sewn to your measurements',
+                  'Get this item sewn to your measurements',
                   style: GoogleFonts.poppins(
                     fontSize: 11,
                     color:    Colors.white.withOpacity(0.65),

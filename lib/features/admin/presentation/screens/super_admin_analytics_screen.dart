@@ -969,23 +969,23 @@ class _SuperAdminAnalyticsScreenState
 
                 const SizedBox(height: 20),
                 const AppSectionTitle(
-                    title: 'Revenue by Fabric Type'),
+                    title: 'Revenue by Product Type'),
                 AnalyticsBarChartCard(
-                  title: 'Fabric Type Sales',
+                  title: 'Product Type Sales',
                   data: salesByFabric,
                   isCurrency: true,
-                  emptyLabel: 'No fabric sales data yet',
+                  emptyLabel: 'No sales data yet',
                 ),
 
                 const SizedBox(height: 20),
                 const AppSectionTitle(
-                    title: 'Orders by Fabric Type'),
+                    title: 'Orders by Product Type'),
                 AnalyticsBarChartCard(
-                  title: 'Fabric Type Orders',
+                  title: 'Product Type Orders',
                   data: ordersByFabric,
                   isCurrency: false,
                   emptyLabel:
-                      'No fabric order data yet',
+                      'No order data yet',
                 ),
 
                 const SizedBox(height: 20),

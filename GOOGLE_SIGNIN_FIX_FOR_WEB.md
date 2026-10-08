@@ -1,4 +1,4 @@
-# Google Sign-In Fix — Phlakes Fabric Web App
+# Google Sign-In Fix — Sakash Web App
 ## Status: ✅ WORKING
 ## Date: 2025
 

@@ -295,7 +295,7 @@ class RideEstimateMapPreviewScreen extends StatelessWidget {
                       const SizedBox(width: 8),
                       Expanded(
                         child: Text(
-                          'Your fabric order will be dispatched from our warehouse to your address.',
+                          'Your order will be dispatched from our warehouse to your address.',
                           style: GoogleFonts.poppins(
                             fontSize: 12,
                             color: colors.brandPrimary,
