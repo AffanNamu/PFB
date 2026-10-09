@@ -1411,7 +1411,7 @@ class _ProductListScreenState extends State<ProductListScreen>
             gradient: const LinearGradient(
               colors: [
                 Color(0xFF0B0B0B),
-                Color(0xFF1A1000),
+                Color(0xFF1A1500),
                 AppPalette.primaryDark,
               ],
               stops: [0.0, 0.55, 1.0],
@@ -1569,7 +1569,7 @@ class _ProductListScreenState extends State<ProductListScreen>
       _OccasionData(
         label: 'Birthday',
         emoji: '🎂',
-        color: isDark ? const Color(0xFF1A1000) : const Color(0xFFFFF9C4),
+        color: isDark ? const Color(0xFF1A1500) : const Color(0xFFFFF9C4),
       ),
       _OccasionData(
         label: 'Corporate',
@@ -1748,7 +1748,7 @@ class _ProductListScreenState extends State<ProductListScreen>
       {
         'label': 'Children',
         'emoji': '👧',
-        'color': isDark ? const Color(0xFF1A1000) : const Color(0xFFF9FBE7),
+        'color': isDark ? const Color(0xFF1A1500) : const Color(0xFFF9FBE7),
       },
     ];
 

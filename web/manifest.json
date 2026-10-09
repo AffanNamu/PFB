@@ -4,7 +4,7 @@
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0B0B0B",
-    "theme_color": "#F5A30F",
+    "theme_color": "#C9A84C",
     "description": "Sakash Collection - Online Store",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,

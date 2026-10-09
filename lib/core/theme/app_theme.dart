@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 // ─────────────────────────────────────────────────────────────────────────────
 // Sakash Brand Analysis from Logo:
 //
-//  PRIMARY    → Amber Gold      #F5A30F  (logo emblem, lettering)
-//  PRIMARY HI → Bright Gold     #FFC53D  (highlight / shimmer)
-//  PRIMARY DK → Deep Gold       #D97706  (pressed / shadow)
+//  PRIMARY    → Metallic Gold   #D4AF37  (logo emblem, lettering)
+//  PRIMARY HI → Bright Gold     #F0C93A  (highlight / shimmer)
+//  PRIMARY DK → Deep Gold       #B8960C  (pressed / shadow)
 //  SECONDARY  → Rich Black      #0B0B0B  (storefront background)
 //  SURFACE BK → Charcoal        #1A1A1A  (dark panels in store)
 //
@@ -24,19 +24,19 @@ class AppPalette {
 
   // ── Brand Core ─────────────────────────────────────────────────
   /// Primary brand gold — amber gold from the Sakash logo
-  static const Color primary = Color(0xFFF5A30F);
+  static const Color primary = Color(0xFFD4AF37);
 
   /// Primary dark — deeper gold for pressed / gradient end
-  static const Color primaryDark = Color(0xFFD97706);
+  static const Color primaryDark = Color(0xFFB8960C);
 
   /// Primary light — bright gold for shimmer / highlights
-  static const Color primaryLight = Color(0xFFFFC53D);
+  static const Color primaryLight = Color(0xFFF0C93A);
 
   /// Premium gold — used very sparingly for maximum luxury impact
-  static const Color premiumGold = Color(0xFFFFB800);
+  static const Color premiumGold = Color(0xFFFFD700);
 
   /// Champagne — soft gold for subtle tints
-  static const Color champagne = Color(0xFFFFE2A8);
+  static const Color champagne = Color(0xFFF7E7A0);
 
   /// Secondary — rich black (storefront + logo background)
   static const Color secondary = Color(0xFF0B0B0B);
@@ -45,7 +45,7 @@ class AppPalette {
   static const Color surfaceBlack = Color(0xFF1A1A1A);
 
   /// Accent — warm bronze for depth
-  static const Color accent = Color(0xFFB45309);
+  static const Color accent = Color(0xFF8B6914);
 
   // ── Semantic ───────────────────────────────────────────────────
   static const Color success = Color(0xFF22AD5C);
@@ -61,8 +61,8 @@ class AppPalette {
   static const Color lightCard       = Color(0xFFFFFFFF);
 
   /// Border: warm gold-tinted silver
-  static const Color lightBorder     = Color(0xFFEFE0CC);
-  static const Color lightBorderSoft = Color(0xFFF6EBDD);
+  static const Color lightBorder     = Color(0xFFE8E0D0);
+  static const Color lightBorderSoft = Color(0xFFF0EBE0);
 
   static const Color lightText       = Color(0xFF111111); // near black
   static const Color lightTextSoft   = Color(0xFF666666);
@@ -70,8 +70,8 @@ class AppPalette {
   static const Color lightShadow     = Color(0x14000000);
 
   // ── Light Gold Tint (for cards / containers) ───────────────────
-  static const Color lightGoldTint   = Color(0xFFFFF7E8); // very pale gold
-  static const Color lightGoldSurface = Color(0xFFFDEBC8);
+  static const Color lightGoldTint   = Color(0xFFFDF8EC); // very pale gold
+  static const Color lightGoldSurface = Color(0xFFF9F1D8);
 
   // ── Dark Mode ──────────────────────────────────────────────────
   /// Deep black — matches the Sakash logo background
@@ -81,8 +81,8 @@ class AppPalette {
   static const Color darkCard        = Color(0xFF1E1E1E);
 
   /// Borders: gold-tinted in dark mode for luxury cohesion
-  static const Color darkBorder      = Color(0x40F5A30F); // 25% gold
-  static const Color darkBorderSoft  = Color(0x1AF5A30F); // 10% gold
+  static const Color darkBorder      = Color(0x40D4AF37); // 25% gold
+  static const Color darkBorderSoft  = Color(0x1AD4AF37); // 10% gold
 
   static const Color darkText        = Color(0xFFFFFFFF);
   static const Color darkTextSoft    = Color(0xFFB5B5B5);
@@ -90,24 +90,24 @@ class AppPalette {
   static const Color darkShadow      = Color(0x66000000);
 
   // ── Dark gold glow (for elevated surfaces) ─────────────────────
-  static const Color darkGoldGlow    = Color(0xFF2A1A08); // warm dark gold
-  static const Color darkGoldSurface = Color(0xFF1F1408);
+  static const Color darkGoldGlow    = Color(0xFF2A2210); // warm dark gold
+  static const Color darkGoldSurface = Color(0xFF1F1A08);
 
   // ── Tonal Palette ──────────────────────────────────────────────
   /// Pale gold — light tinted containers, subtle backgrounds
-  static const Color paleGold    = Color(0xFFFFF7E8);
+  static const Color paleGold    = Color(0xFFFDF8EC);
 
   /// Ivory — cream-like premium surface
   static const Color ivory       = Color(0xFFFFFBF0);
 
   /// Warm beige — soft warm tone
-  static const Color warmBeige   = Color(0xFFF8E9D2);
+  static const Color warmBeige   = Color(0xFFF5EDD8);
 
   /// Rich brown — warm text on cream
-  static const Color brown       = Color(0xFF8A4B0F);
+  static const Color brown       = Color(0xFF7A5C1E);
 
   /// Dark brown — deep warm contrast
-  static const Color darkBrown   = Color(0xFF3D1F00);
+  static const Color darkBrown   = Color(0xFF3D2A00);
 
   /// Muted purple — subtle accent variety
   static const Color purple      = Color(0xFF6D28D9);
@@ -120,7 +120,7 @@ class AppPalette {
   static const Color paleRed     = Color(0xFFFFF0F0);
 
   // ── Dark-mode tonal backgrounds ────────────────────────────────
-  static const Color darkPaleGold   = Color(0xFF1A1000);
+  static const Color darkPaleGold   = Color(0xFF1A1500);
   static const Color darkPaleOrange = Color(0xFF1F1208);
   static const Color darkPaleGreen  = Color(0xFF0A1F14);
   static const Color darkPaleBlue   = Color(0xFF0A1428);
@@ -1288,7 +1288,7 @@ class AppGradients {
 
   /// Premium banner — storefront dark + gold shimmer
   static const LinearGradient premiumBanner = LinearGradient(
-    colors: [Color(0xFF0B0B0B), Color(0xFF1A1000), AppPalette.primaryDark],
+    colors: [Color(0xFF0B0B0B), Color(0xFF1A1500), AppPalette.primaryDark],
     stops:  [0.0, 0.6, 1.0],
     begin:  Alignment.centerLeft,
     end:    Alignment.centerRight,
@@ -1296,7 +1296,7 @@ class AppGradients {
 
   /// Luxury dark — for hero sections in dark mode
   static const LinearGradient luxuryDark = LinearGradient(
-    colors: [Color(0xFF0B0B0B), Color(0xFF161616), Color(0xFF1A1000)],
+    colors: [Color(0xFF0B0B0B), Color(0xFF161616), Color(0xFF1A1500)],
     begin:  Alignment.topLeft,
     end:    Alignment.bottomRight,
   );
@@ -1304,13 +1304,13 @@ class AppGradients {
   /// Gold shimmer — for skeleton loaders / premium indicators
   static const LinearGradient goldShimmer = LinearGradient(
     colors: [
-      Color(0xFFD97706),
-      Color(0xFFF5A30F),
-      Color(0xFFFFC53D),
-      Color(0xFFFFB800),
-      Color(0xFFFFC53D),
-      Color(0xFFF5A30F),
-      Color(0xFFD97706),
+      Color(0xFFB8960C),
+      Color(0xFFD4AF37),
+      Color(0xFFF0C93A),
+      Color(0xFFFFD700),
+      Color(0xFFF0C93A),
+      Color(0xFFD4AF37),
+      Color(0xFFB8960C),
     ],
     stops: [0.0, 0.15, 0.35, 0.5, 0.65, 0.85, 1.0],
   );
